@@ -18,79 +18,14 @@ class CheckpointIO(object):
             global_step = ckpt.get("step", 0)
         log.info(f"load from {start_epoch} epoch ({global_step} step, from '{load_from}').")
 
-        mkey = "state"
-
-        # mkey = "model"
-        # for i in range(6):
-        #     old_prefix = "audio_encoder.layers."+str(i)
-        #     new_prefix = "_model._audio_encoder._layers."+str(i+1)
-        #     _keys = [key for key in ckpt[mkey].keys() if key.find(old_prefix) == 0]
-        #     for old_k in _keys:
-        #         new_k = old_k.replace(old_prefix, new_prefix)
-        #         ckpt[mkey][new_k] = ckpt[mkey][old_k]
-        #         del ckpt[mkey][old_k]
-
-        # for i in range(2):
-        #     old_prefix = "time_aggregator.layers."+str(i)
-        #     new_prefix = "_model._audio_encoder._layers."+str(i+9)
-        #     _keys = [key for key in ckpt[mkey].keys() if key.find(old_prefix) == 0]
-        #     for old_k in _keys:
-        #         new_k = old_k.replace(old_prefix, new_prefix)
-        #         ckpt[mkey][new_k] = ckpt[mkey][old_k]
-        #         del ckpt[mkey][old_k]
-
-        # for i in range(1):
-        #     old_prefix = "anime_decoder.layers."+str(i)
-        #     new_prefix = "_model._output_module._layers."+str(i)
-        #     _keys = [key for key in ckpt[mkey].keys() if key.find(old_prefix) == 0]
-        #     for old_k in _keys:
-        #         new_k = old_k.replace(old_prefix, new_prefix)
-        #         ckpt[mkey][new_k] = ckpt[mkey][old_k]
-        #         del ckpt[mkey][old_k]
-
-        # for i in range(3):
-        #     old_prefix = "anime_decoder.layers_scale."+str(i)
-        #     new_prefix = "_model._output_module._scale_layers."+str(i)
-        #     _keys = [key for key in ckpt[mkey].keys() if key.find(old_prefix) == 0]
-        #     for old_k in _keys:
-        #         new_k = old_k.replace(old_prefix, new_prefix)
-        #         ckpt[mkey][new_k] = ckpt[mkey][old_k]
-        #         del ckpt[mkey][old_k]
-
-        # for i in range(3):
-        #     old_prefix = "anime_decoder.layers_rotat."+str(i)
-        #     new_prefix = "_model._output_module._rotat_layers."+str(i)
-        #     _keys = [key for key in ckpt[mkey].keys() if key.find(old_prefix) == 0]
-        #     for old_k in _keys:
-        #         new_k = old_k.replace(old_prefix, new_prefix)
-        #         ckpt[mkey][new_k] = ckpt[mkey][old_k]
-        #         del ckpt[mkey][old_k]
-
-        # ckpt[mkey]["_model._output_module._scale_pca.compT"] = ckpt[mkey]["anime_decoder.proj_scale.compT"]
-        # ckpt[mkey]["_model._output_module._scale_pca.means"] = ckpt[mkey]["anime_decoder.proj_scale.means"]
-        # ckpt[mkey]["_model._output_module._rotat_pca.compT"] = ckpt[mkey]["anime_decoder.proj_rotat.compT"]
-        # ckpt[mkey]["_model._output_module._rotat_pca.means"] = ckpt[mkey]["anime_decoder.proj_rotat.means"]
-        # del ckpt[mkey]["anime_decoder.proj_scale.compT"]
-        # del ckpt[mkey]["anime_decoder.proj_scale.means"]
-        # del ckpt[mkey]["anime_decoder.proj_rotat.compT"]
-        # del ckpt[mkey]["anime_decoder.proj_rotat.means"]
-
-        # # _ext_batch_norm -> _ext_post_bn
-        # _bn_keys = [key for key in ckpt[mkey].keys() if key.find("_ext_batch_norm") >= 0]
-        # for k in _bn_keys:
-        #     new_k = k.replace("_ext_batch_norm", "_ext_post_bn")
-        #     ckpt[mkey][new_k] = ckpt[mkey][k]
-        #     del ckpt[mkey][k]
-
         # load model
         try:
-            self.model.load_state_dict(ckpt[mkey])
+            self.model.load_state_dict(ckpt["state"])
         except RuntimeError as err:
-            log.fatal("failed to load model, {}", err)
             # partially load
             if self.training:
                 log.warn("Failed to load model, try to load partially")
-                self.model.load_state_dict(ckpt[mkey], strict=False)
+                self.model.load_state_dict(ckpt["state"], strict=False)
             else:
                 log.fatal("failed to load model, {}", err)
 

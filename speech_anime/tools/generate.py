@@ -194,8 +194,8 @@ def generate(
                 audio_sr=44100,
                 save_video=True,
                 video_path=src_args.output,
-                grid_w=kwargs.get("grid_w", 500),
-                grid_h=kwargs.get("grid_h", 500),
+                grid_w=kwargs.get("grid_w", 768),
+                grid_h=kwargs.get("grid_h", 768),
                 font_size=kwargs.get("font_size", 24),
                 **kwargs
             )

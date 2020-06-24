@@ -1,7 +1,6 @@
 import saber
 import numpy as np
 from .preload import preload_voca as preload
-from .dataset_win2frm_dg import DatasetWin2Frm
 from . import config
 from . import non_face, nose
 

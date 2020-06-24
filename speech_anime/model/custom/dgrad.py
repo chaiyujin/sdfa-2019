@@ -86,8 +86,8 @@ hparams = dict(
             ],
             using_pca=True,
             pca_trainable=False,
-            pca_scale=("experiments/pca/scale_compT.npy", "experiments/pca/scale_means.npy"),
-            pca_rotat=("experiments/pca/rotat_compT.npy", "experiments/pca/rotat_means.npy"),
+            pca_scale=("assets/pca/scale_compT.npy", "assets/pca/scale_means.npy"),
+            pca_rotat=("assets/pca/rotat_compT.npy", "assets/pca/rotat_means.npy"),
         ),
         # condition: speakers
         speaker_embedding=dict(
@@ -112,7 +112,7 @@ hparams = dict(
         save_gap_epochs=10,
         reference_metric="ploss",
         reference_metric_larger=False,
-        eval_debug=True,
+        eval_debug=False,
         evaluate=dict(
             test=[
                 ("/home/yuki/Videos/obama/test-000.mp4", "speaker=m1"),

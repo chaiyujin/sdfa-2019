@@ -844,6 +844,79 @@ def generate_dgrad(offsets_root, dgrad_root):
              os.path.join(dgrad_root,   "valid.csv"))
 
 
+def pca_offsets(offsets_root, step=1):
+    from sklearn.decomposition import PCA, IncrementalPCA
+    csv_file = os.path.join(offsets_root, "train.csv")
+    meta_data, info_list = saber.csv.read_csv(csv_file)
+
+    npy_path_list = []
+    for data_dict in saber.log.tqdm(info_list):
+        data_dir = data_dict["npy_data_path:path"]
+        for i, npy_path in enumerate(saber.filesystem.find_files(data_dir, r"-*\d+\.npy")):
+            if step > 1 and i % step != 0:
+                continue
+            npy_path_list.append(npy_path)
+
+    full_shape = (len(npy_path_list), len(np.load(npy_path_list[0])))
+    all_verts = np.zeros(full_shape, dtype=np.float32)
+    for r, npy_path in enumerate(saber.log.tqdm(npy_path_list, desc="pca, find frames")):
+        all_verts[r] = np.load(npy_path)
+
+    # pca
+    saber.log.info("pca...", all_verts.shape)
+    pca = PCA(n_components=0.97, copy=False)
+    with saber.log.timeit("pca fitting"):
+        pca.fit(all_verts)
+    print(pca.explained_variance_ratio_.cumsum()[-1], len(pca.explained_variance_ratio_))
+    saber.log.info("compT: {}, means: {}".format(pca.components_.T.shape, pca.mean_.shape))
+    os.makedirs(os.path.join(offsets_root, "pca"), exist_ok=True)
+    np.save(os.path.join(offsets_root, "pca", "compT.npy"), pca.components_.T)
+    np.save(os.path.join(offsets_root, "pca", "means.npy"), pca.mean_)
+
+
+def pca_dgrad(dgrad_root, step=1):
+    from sklearn.decomposition import PCA, IncrementalPCA
+    step = 1
+    csv_file = os.path.join(dgrad_root, "train.csv")
+    meta_data, info_list = saber.csv.read_csv(csv_file)
+
+    npy_path_list = []
+    for data_dict in saber.log.tqdm(info_list):
+        data_dir = data_dict["npy_data_path:path"]
+        for i, npy_path in enumerate(saber.filesystem.find_files(data_dir, r"-*\d+\.npy")):
+            if step > 1 and i % step != 0:
+                continue
+            npy_path_list.append(npy_path)
+
+    all_scale = np.zeros((len(npy_path_list), 9976*6), dtype=np.float32)
+    all_rotat = np.zeros((len(npy_path_list), 9976*3), dtype=np.float32)
+    for r, npy_path in enumerate(saber.log.tqdm(npy_path_list, desc="pca, find frames")):
+        dg = np.reshape(np.load(npy_path), (-1, 9))
+        all_scale[r] = dg[:, :6].flatten()
+        all_rotat[r] = dg[:, 6:].flatten()
+
+    # pca
+    # scale
+    saber.log.info("pca scale...")
+    pca = PCA(0.97, copy=False)
+    pca.fit(all_scale)
+    print('scale', pca.explained_variance_ratio_.cumsum()[-1])
+    saber.log.info("compT: {}, means: {}".format(pca.components_.T.shape, pca.mean_.shape))
+    os.makedirs(os.path.join(dgrad_root, "pca"), exist_ok=True)
+    np.save(os.path.join(dgrad_root, "pca", "scale_compT.npy"), pca.components_.T)
+    np.save(os.path.join(dgrad_root, "pca", "scale_means.npy"), pca.mean_)
+    del pca
+
+    # rotat
+    saber.log.info("pca rotat...")
+    pca = PCA(0.97, copy=False)
+    pca.fit(all_rotat)
+    print('rotat', pca.explained_variance_ratio_.cumsum()[-1])
+    saber.log.info("compT: {}, means: {}".format(pca.components_.T.shape, pca.mean_.shape))
+    os.makedirs(os.path.join(dgrad_root, "pca"), exist_ok=True)
+    np.save(os.path.join(dgrad_root, "pca", "rotat_compT.npy"), pca.components_.T)
+    np.save(os.path.join(dgrad_root, "pca", "rotat_means.npy"), pca.mean_)
+    del pca
 
 
 if __name__ == "__main__":
@@ -860,24 +933,28 @@ if __name__ == "__main__":
     parser.add_argument("--debug_video", action="store_true")
     args = parser.parse_args()
 
-    # clean_voca(
-    #     root=args.source_root,
-    #     clean_root=os.path.join(args.output_root, "clean"),
-    #     debug_root=os.path.join(args.output_root, "debug"),
-    #     sample_rate=args.sample_rate,
-    #     target_db=args.target_db
-    # )
+    clean_voca(
+        root=args.source_root,
+        clean_root=os.path.join(args.output_root, "clean"),
+        debug_root=os.path.join(args.output_root, "debug"),
+        sample_rate=args.sample_rate,
+        target_db=args.target_db
+    )
 
-    # preload_voca(
-    #     root        = args.source_root,
-    #     clean_root  = os.path.join(args.output_root, "clean"),
-    #     output_root = os.path.join(args.output_root, "offsets"),
-    #     sample_rate = args.sample_rate,
-    #     debug_audio = False,
-    #     debug_video = False,
-    # )
+    preload_voca(
+        root        = args.source_root,
+        clean_root  = os.path.join(args.output_root, "clean"),
+        output_root = os.path.join(args.output_root, "offsets"),
+        sample_rate = args.sample_rate,
+        debug_audio = False,
+        debug_video = False,
+    )
 
     generate_dgrad(
         offsets_root = os.path.join(args.output_root, "offsets"),
         dgrad_root   = os.path.join(args.output_root, "dgrad")
     )
+
+    # PCA for offsets and dgrad
+    pca_offsets(os.path.join(args.output_root, "offsets"))
+    pca_dgrad(os.path.join(args.output_root, "dgrad"))
