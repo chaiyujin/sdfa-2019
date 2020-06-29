@@ -294,6 +294,9 @@ def preload_voca(
             # if si != 2:
             #     continue
 
+            if spk == "m5" and si == 26:  # data error! missing frame 1
+                continue
+
             path = os.path.join(spk_root, "sentence{}".format(str(si).zfill(2)))
             if not os.path.exists(path):
                 continue
@@ -321,7 +324,7 @@ def preload_voca(
             all_info_dicts.append(info_dict)
             # except Exception as e:
             #     saber.log.error(e)
-            break
+            # break
 
     os.makedirs(output_root, exist_ok=True)
     # if len(speakers) == 1:
