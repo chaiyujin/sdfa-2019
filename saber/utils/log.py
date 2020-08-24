@@ -6,7 +6,7 @@ import inspect
 import datetime
 from colorama import init
 from termcolor import colored
-from tqdm import tqdm as original_tqdm
+from tqdm import tqdm
 
 init()
 
@@ -14,28 +14,6 @@ __std = [sys.stdout]
 __err = [sys.stderr]
 __map_std = {}
 __map_err = {}
-
-
-class tqdm(original_tqdm):
-    __saber_prefix__ = "[saber][~]"
-
-    def display(self, msg=None, pos=None):
-        if pos:
-            self.moveto(pos)
-
-        if msg is None:
-            if self.desc.find(self.__saber_prefix__) < 0:
-                if len(self.desc) > 0:
-                    self.desc = self.__saber_prefix__ + f" | {self.desc}"
-                else:
-                    self.desc = self.__saber_prefix__
-            msg = self.__repr__()
-
-        msg = colored(msg, "blue")
-        self.sp(msg)
-
-        if pos:
-            self.moveto(-pos)
 
 
 def is_console(fp):

@@ -6,7 +6,7 @@ import saber.data.mesh.io as meshio
 import saber.utils.filesystem as fs
 import saber.data.audio as saber_audio
 from speech_anime import viewer
-from saberspeech.datasets import voca
+from speech_anime.datasets import vocaset
 
 root = "assets/voca-sr8k/dgrad"
 offs_root = "assets/voca-sr8k/offsets"
@@ -64,8 +64,8 @@ def dump_video(template, dg_prefix, of_prefix, output_path):
 
 for spk in speakers:
     print(spk)
-    alias = voca.get_speaker_alias(spk)
-    template_path = f"saberspeech/datasets/voca/templates/{alias}.ply"
+    alias = vocaset.get_speaker_alias(spk)
+    template_path = os.path.join(vocaset.root, f"templates/{alias}.ply")
     assert os.path.exists(template_path)
     verts, faces = saber.mesh.read_mesh(template_path)
     saber.mesh.write_obj(os.path.splitext(template_path)[0] + '.obj', verts, faces)

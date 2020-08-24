@@ -1,6 +1,7 @@
 import torch
 import librosa
 import numpy as np
+import soundfile as sf
 
 
 # load wav signal with configured sample rate
@@ -16,4 +17,4 @@ def load(path, sr, as_tensor=None):
 def save(path, signal, sr):
     if torch.is_tensor(signal):
         signal = signal.detach().cpu().numpy()
-    librosa.output.write_wav(path, signal, sr=sr, norm=False)
+    sf.write(path, signal, samplerate=sr)

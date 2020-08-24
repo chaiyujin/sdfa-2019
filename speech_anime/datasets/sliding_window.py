@@ -12,8 +12,8 @@ from saber import (
 from tqdm import tqdm
 from copy import deepcopy
 from collections import defaultdict
-from saberspeech.datasets.tools import get_features, data_info
-from saberspeech.datasets.speech_anime import SpeechAnimeDataset
+from . import get_features
+from .speech_anime import SpeechAnimeDataset
 
 
 class DatasetSlidingWindow(SpeechAnimeDataset):

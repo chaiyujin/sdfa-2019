@@ -1,8 +1,11 @@
+import os
 import saber
 import numpy as np
-from .preload import preload_voca as preload
-from . import config
-from . import non_face, nose
+from . import config, preload
+from .mask import non_face
+
+
+root = os.path.dirname(__file__)
 
 
 def set_hparams(src_hparams: saber.ConfigDict):

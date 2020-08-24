@@ -8,8 +8,6 @@ import matplotlib
 import numpy as np
 import saber.utils.filesystem as saber_fs
 from .. import viewer
-from ..model import SaberTwoPhase
-from ..datasets import DatasetSlidingWindow
 
 
 __supported_running_modes__ = ["train", "evaluate", "generate"]
@@ -26,9 +24,9 @@ def configure(args) -> saber.ConfigDict:
     assert isinstance(args, saber.ConfigDict)
     args.check_keys("mode")
 
-    model_root = os.path.join(__root__, "model")
+    config_root = os.path.join(__root__, "config")
     # load default hparams
-    hparams = saber.ConfigDict(os.path.join(model_root, "default.py"))
+    hparams = saber.ConfigDict(os.path.join(config_root, "default.py"))
 
     # check mode in args
     mode = args.get("mode")
@@ -41,10 +39,8 @@ def configure(args) -> saber.ConfigDict:
             args.custom_hparams,
             must_be_found  = True,
             possible_exts  = [".json", ".py"],
-            possible_roots = [
-                os.path.join(model_root, "custom"),
-                (args.get("log_dir") or ".")
-            ],
+            possible_roots = [os.path.join(config_root, "model"),
+                              (args.get("log_dir") or ".")],
         )
         # load custom hparams
         custom = saber.ConfigDict(filename)
@@ -71,23 +67,20 @@ def configure(args) -> saber.ConfigDict:
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
 
-    # random seed
+    # set random seed
     seed = hparams.get("seed", 1234)
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
 
-    # return classes
-    class_dict = dict(
-        model   = SaberTwoPhase,
-        dataset = DatasetSlidingWindow
-    )
-
     # set default template
-    assert hparams.anime.get("default_template_mesh") is not None
-    viewer.set_template_mesh(hparams.anime.default_template_mesh)
+    default_template_mesh = os.path.join(
+        os.path.dirname(os.path.dirname(__file__)), 
+        "datasets/vocaset/template/FLAME_sample.obj"
+    )
+    viewer.set_template_mesh(default_template_mesh)
 
-    return hparams, class_dict
+    return hparams
 
 
 def _overwrite_hparams(hparams, args, key):
@@ -96,7 +89,7 @@ def _overwrite_hparams(hparams, args, key):
 
 
 def _maybe_load_dataset_hparams(dataset_type, args, hparams):
-    custom_root = os.path.join(__root__, "datasets", "custom")
+    custom_root = os.path.join(__root__, "config", "data")
     dataset_type = dataset_type.lower()
 
     if hparams.get(dataset_type) is not None:

@@ -7,7 +7,7 @@ import librosa
 import numpy as np
 
 
-def prepare_sources_dict(
+def _prepare_sources_dict(
     output_dir, sources_dict,
     overwrite_video=False,
     all_args=["path", "output", "speaker", "emotion", "frame_id"],
@@ -118,84 +118,3 @@ def _append_images_source(render_list, sound_signal, others, name, tslist):
         "tslist": tslist
     }
     render_list.append(img_src)
-
-
-def generate(
-    saber_model,
-    output_dir,
-    sources_dict,
-    dataset_class,
-    overwrite_video=False,
-    **kwargs
-):
-    from .. import viewer
-    assert not saber_model.training
-
-    sources_dict = prepare_sources_dict(
-        output_dir, sources_dict,
-        overwrite_video=overwrite_video
-    )
-
-    sr = saber_model.hp.audio.sample_rate
-    fps = saber_model.hp.anime.fps
-    denoise_audio = kwargs.get("denoise", False)
-
-    # process all sources
-    for _, sources in sources_dict.items():
-        for src_args in sources:
-            os.makedirs(os.path.dirname(src_args.output), exist_ok=True)
-            name, ext = os.path.splitext(os.path.basename(src_args.path))
-            true_data, signal, sound_signal = _load_source(src_args.path, sr, denoise_audio)
-            if signal is None:
-                continue
-            # to render
-            render_list = []
-            if kwargs.get("draw_truth", False) and true_data is not None:
-                render_list.append(true_data)
-            # normalize singal
-            signal = saber.audio.rms.normalize(
-                signal, saber_model.hp.dataset_anime.audio_target_db)
-            # predicate
-            saber.log.info(f"infer from {name}")
-            # predicate animation
-            tslist, animes, others =\
-                saber_model.generate_animation(
-                    signal=signal,
-                    dataset_class=dataset_class,
-                    **src_args, **kwargs
-                )
-            # infer dict
-            inferred = {
-                "title": f"infer: {name}",
-                "audio": sound_signal
-            }
-            face_type = saber_model.hp.model.face_data_type
-            inferred[face_type] = animes
-            inferred["tslist"] = tslist
-            # append to sources
-            render_list.append(inferred)
-
-            if kwargs.get("draw_latent", False):
-                _append_images_source(render_list, others, "inputs", tslist)  # inputs
-                _append_images_source(render_list, others, "latent", tslist)  # latent
-            if kwargs.get("draw_align", False):
-                _append_images_source(render_list, others, "latent_align", tslist)
-                _append_images_source(render_list, others, "formants", tslist)
-            if kwargs.get("draw_phones", False):
-                _append_images_source(render_list, others, "phones", tslist)
-
-            if not kwargs.get("with_title", False):
-                for i in range(len(render_list)):
-                    render_list[i]["title"] = ""
-
-            viewer.render_video(
-                sources=render_list,
-                video_fps=fps,
-                audio_sr=44100,
-                save_video=True,
-                video_path=src_args.output,
-                grid_w=kwargs.get("grid_w", 768),
-                grid_h=kwargs.get("grid_h", 768),
-                font_size=kwargs.get("font_size", 24),
-                **kwargs
-            )

@@ -7,6 +7,7 @@ import saber
 import numpy as np
 from tqdm import tqdm
 from ..tools import FaceDataType
+from ..datasets.vocaset.mask import non_face
 try:
     from . import cpp_render as renderer
 except Exception:
@@ -16,7 +17,6 @@ _template_verts, _template_faces = None, None
 
 
 def set_dgrad_static(verts, faces):
-    from saberspeech.datasets.voca import non_face
     global _template_verts
     global _template_faces
     _template_verts = verts
@@ -48,7 +48,6 @@ def frame_to_mesh(data_frame, face_data_type):
     # for different data type
     if face_data_type == FaceDataType.dgrad_3d:
         assert _template_verts is not None and _template_faces is not None
-        from saberspeech.datasets.voca import non_face
         # only support verts
         data_frame = data_frame.flatten(order='C').astype(np.float32)
         assert len(data_frame) in [89784],\

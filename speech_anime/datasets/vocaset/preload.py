@@ -17,7 +17,7 @@ from saber.data.mesh.io import read_ply
 from saber.utils.bilateral import BilateralFilter1D
 from scipy.ndimage.filters import gaussian_filter1d
 from collections import defaultdict
-from ..tools import data_info
+from speech_anime.tools import data_info
 from .config import speaker_alias_dict
 
 
@@ -138,7 +138,7 @@ _must_silent_dict = dict(
 )
 
 
-with open(os.path.join(os.path.dirname(__file__), "templates_myprocess", "voca_lower_face.txt")) as fp:
+with open(os.path.join(os.path.dirname(__file__), "mask", "voca_lower_face.txt")) as fp:
     line = fp.readline().strip().split()
     _lower_vert_ids = np.asarray([int(x) for x in line], np.int32)
     _other_vert_ids = np.asarray([
@@ -267,7 +267,7 @@ def clean_voca(root, clean_root, debug_root, sample_rate, target_db):
 
     # process all tasks
     err_list = []
-    progress = saber.log.tqdm(futures)
+    progress = saber.log.tqdm(futures, desc='clean voca')
     for future in progress:
         err_name = future.result()
         if err_name is not None:
@@ -417,7 +417,7 @@ def _process_phonemes(phoneme_tuples, signal, sr):
     return phonemes, vad
 
 
-temp_verts, temp_faces = saber.mesh.read_mesh("saberspeech/datasets/voca/template/FLAME_sample.ply")
+temp_verts, temp_faces = saber.mesh.read_mesh("speech_anime/datasets/vocaset/template/FLAME_sample.ply")
 
 
 def _collect(
@@ -657,10 +657,7 @@ def _collect(
                 return feat
 
             with open(output_path + "_audio", "rb") as fp:
-                _vis_data = pickle.load(fp)
-                assert sr == _vis_data["sr"]
-            _vis_tslist = []
-            _vis_frames = []
+                _vis_data = pickle.get_speaker_alias
             _vis_images = []
             sliding_size = 128 * 64 + (1024 - 128)
             fi = 0
@@ -768,13 +765,6 @@ def _collect(
 
 
 def generate_dgrad(offsets_root, dgrad_root):
-    from saberspeech.datasets import voca
-
-    # temp_verts, temp_faces = saber.mesh.read_mesh("saberspeech/datasets/voca/template/FLAME_sample.ply")
-    # c_indices = voca.non_face.non_face_verts
-    # c_verts = temp_verts[c_indices]
-    # saber.mesh.deformation.set_target(verts=temp_verts, faces=temp_faces, cnsts=c_indices)
-
     speakers = _train_speakers + _valid_speakers + _test_speakers
 
     def _get_deform_grad(offsets, save_path, spk_template):
@@ -787,14 +777,15 @@ def generate_dgrad(offsets_root, dgrad_root):
             eps=1e-6,
         )
         dg = np.reshape(dg, (-1, 9))
-        dg[voca.non_face.non_face_tris] = 0
+        dg[mask.non_face.non_face_tris] = 0
         np.save(save_path, dg.flatten(order='C').astype(np.float32))
 
+    voca_root = os.path.dirname(__file__)
     for speaker in speakers:
         print("->", speaker)
         spk_root = os.path.join(offsets_root, "data", speaker, "neutral")
         spk_template, spk_faces = saber.mesh.read_mesh(
-            os.path.join("saberspeech/datasets/voca/templates/{}.ply".format(voca.get_speaker_alias(speaker))),
+            os.path.join(voca_root, "/templates/{}.ply".format(speaker_alias_dict.get(speaker))),
             dtype=np.float32
         )
 
@@ -866,7 +857,7 @@ def pca_offsets(offsets_root, step=1):
         all_verts[r] = np.load(npy_path)
 
     # pca
-    saber.log.info("pca...", all_verts.shape)
+    saber.log.info("pca verts offsets...", all_verts.shape)
     pca = PCA(n_components=0.97, copy=False)
     with saber.log.timeit("pca fitting"):
         pca.fit(all_verts)
@@ -920,44 +911,3 @@ def pca_dgrad(dgrad_root, step=1):
     np.save(os.path.join(dgrad_root, "pca", "rotat_compT.npy"), pca.components_.T)
     np.save(os.path.join(dgrad_root, "pca", "rotat_means.npy"), pca.mean_)
     del pca
-
-
-if __name__ == "__main__":
-    import argparse
-    import matplotlib
-    matplotlib.use('Agg')
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--source_root", type=str,   required=True)
-    parser.add_argument("--output_root", type=str,   required=True)
-    parser.add_argument("--sample_rate", type=int,   default=8000)
-    parser.add_argument("--target_db",   type=float, default=-24.5)
-    parser.add_argument("--debug_audio", action="store_true")
-    parser.add_argument("--debug_video", action="store_true")
-    args = parser.parse_args()
-
-    clean_voca(
-        root=args.source_root,
-        clean_root=os.path.join(args.output_root, "clean"),
-        debug_root=os.path.join(args.output_root, "debug"),
-        sample_rate=args.sample_rate,
-        target_db=args.target_db
-    )
-
-    preload_voca(
-        root        = args.source_root,
-        clean_root  = os.path.join(args.output_root, "clean"),
-        output_root = os.path.join(args.output_root, "offsets"),
-        sample_rate = args.sample_rate,
-        debug_audio = False,
-        debug_video = False,
-    )
-
-    generate_dgrad(
-        offsets_root = os.path.join(args.output_root, "offsets"),
-        dgrad_root   = os.path.join(args.output_root, "dgrad")
-    )
-
-    # PCA for offsets and dgrad
-    pca_offsets(os.path.join(args.output_root, "offsets"))
-    pca_dgrad(os.path.join(args.output_root, "dgrad"))

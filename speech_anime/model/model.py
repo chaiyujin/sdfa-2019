@@ -9,10 +9,12 @@ import numpy as np
 from copy import deepcopy
 from .. import modules
 from ..tools import FaceDataType, PredictionType
+from ..datasets import DatasetSlidingWindow
 from .criterion import PLoss, MLoss, ELoss, DynamicLossScaler
+from .eval_utils import _prepare_sources_dict, _load_source, _append_images_source
 
 
-class TwoPhase(torch.nn.Module):
+class SpeechDrivenAnimation(torch.nn.Module):
     """ audio_feat -> anime_feat model """
 
     def __init__(self, hparams):
@@ -49,12 +51,12 @@ class TwoPhase(torch.nn.Module):
         )
 
 
-class SaberTwoPhase(saber.SaberModel):
+class SaberSpeechDrivenAnimation(saber.SaberModel):
     """ Handle training, evaluation and other things """
 
     def __init__(self, hparams, trainset, validset):
         super().__init__(hparams, trainset, validset)
-        self._model = TwoPhase(hparams)
+        self._model = SpeechDrivenAnimation(hparams)
         self._face_type = self._model._output_module._face_type
         self._pred_type = self._model._output_module._pred_type
         self._anime_loss_weight = hparams.loss.get("anime_loss_weight")
@@ -98,35 +100,50 @@ class SaberTwoPhase(saber.SaberModel):
         loss_dict, scalars = self.get_loss(pred_dict, batch)
         return pred_dict, loss_dict, scalars
 
-    def evaluate(self, sources, experiment=None, in_trainer=True):
+    def evaluate(self, sources, experiment=None, in_trainer=True, **kwargs):
         from .. import viewer
-        from ..datasets import DatasetSlidingWindow
-        from ..tools.generate import prepare_sources_dict, _load_source, _append_images_source
 
-        sources_dict = prepare_sources_dict(
-            os.path.join(experiment.log_dir, "eval_at_train"),
-            sources,
-            overwrite_video=True
-        )
+        self.eval()
 
         sr = self.hp.audio.sample_rate
         fps = self.hp.anime.fps
+
+        default_out = "evaluate_results"
+        if experiment is not None:
+            default_out = os.path.join(experiment.log_dir, "eval_at_train")
+        # get from kwargs
+        output_dir = kwargs.get("output_dir", default_out)
+        denoise_audio = kwargs.get("denoise_audio", False)
+        overwrite_video = kwargs.get("overwrite_video", True)
+        with_title = kwargs.get("with_title", False)
+        draw_truth = kwargs.get("draw_truth", False)
+        draw_align = kwargs.get("draw_align", False)
+        draw_latent = kwargs.get("draw_latent", False)
+        grid_w = kwargs.get("grid_w", 512)
+        grid_h = kwargs.get("grid_h", 512)
+        font_size = kwargs.get("font_size", 24)
+        audio_target_db = kwargs.get("audio_target_db", self.hp.dataset_anime.audio_target_db)
+
+        sources_dict = _prepare_sources_dict(
+            sources_dict=sources,
+            output_dir=output_dir,
+            overwrite_video=overwrite_video
+        )
 
         # process all sources
         for _, sources in sources_dict.items():
             for src_args in sources:
                 os.makedirs(os.path.dirname(src_args.output), exist_ok=True)
                 name, ext = os.path.splitext(os.path.basename(src_args.path))
-                true_data, signal, sound_signal = _load_source(src_args.path, sr, denoise_audio=False)
+                true_data, signal, sound_signal = _load_source(src_args.path, sr, denoise_audio)
                 if signal is None:
                     continue
                 # to render
                 render_list = []
-                if true_data is not None:
+                if draw_truth and true_data is not None:
                     render_list.append(true_data)
                 # normalize singal
-                signal = saber.audio.rms.normalize(
-                    signal, self.hp.dataset_anime.audio_target_db)
+                signal = saber.audio.rms.normalize(signal, audio_target_db)
                 # predicate
                 saber.log.info(f"infer from {name}")
                 # predicate animation
@@ -134,7 +151,7 @@ class SaberTwoPhase(saber.SaberModel):
                     self.generate_animation(
                         signal=signal,
                         dataset_class=DatasetSlidingWindow,
-                        **src_args,
+                        **src_args, **kwargs
                     )
                 # infer dict
                 inferred = {
@@ -147,20 +164,30 @@ class SaberTwoPhase(saber.SaberModel):
                 # append to sources
                 render_list.append(inferred)
 
-                _append_images_source(render_list, sound_signal, others, "inputs", tslist)  # inputs
-                _append_images_source(render_list, sound_signal, others, "latent", tslist)  # latent
-                _append_images_source(render_list, sound_signal, others, "latent_align", tslist)
-                _append_images_source(render_list, sound_signal, others, "formants", tslist)
+                if draw_latent:
+                    _append_images_source(render_list, sound_signal, others, "inputs", tslist)  # inputs
+                    _append_images_source(render_list, sound_signal, others, "latent", tslist)  # latent
+                if draw_align:
+                    _append_images_source(render_list, sound_signal, others, "latent_align", tslist)
+                    _append_images_source(render_list, sound_signal, others, "formants", tslist)
 
+                if not with_title:
+                    for i in range(len(render_list)):
+                        render_list[i]["title"] = ""
+
+                video_path = (
+                    "{}/[{:04d}]{}".format(os.path.dirname(src_args.output), self.current_epoch, os.path.basename(src_args.output))
+                    if in_trainer else src_args.output
+                )
                 viewer.render_video(
-                    sources=render_list,
-                    video_fps=fps,
-                    audio_sr=44100,
-                    save_video=True,
-                    video_path="{}/[{:04d}]{}".format(os.path.dirname(src_args.output), self.current_epoch, os.path.basename(src_args.output)),
-                    grid_w=500,
-                    grid_h=500,
-                    font_size=24,
+                    sources    = render_list,
+                    video_fps  = fps,
+                    audio_sr   = 44100,
+                    save_video = True,
+                    video_path = video_path,
+                    grid_w     = grid_w,
+                    grid_h     = grid_h,
+                    font_size  = font_size,
                 )
 
     def data_to_anime_feat(self, tensor_dict, is_prediction):
@@ -366,9 +393,7 @@ class SaberTwoPhase(saber.SaberModel):
             feats = feats.cuda()
         return feats
 
-    def _feature_to_anime(
-        self, feat_list, energy_list, speaker_id, emotion_id, frame_id, bs=100
-    ):
+    def _feature_to_anime(self, feat_list, energy_list, speaker_id, emotion_id, frame_id, bs=100):
 
         def _int_to_tensor(idx, size):
             assert isinstance(idx, int), f"given index is {idx}, {type(idx)}"

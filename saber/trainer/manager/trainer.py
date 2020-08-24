@@ -265,7 +265,8 @@ class Trainer(object):
             if self._should_at_step(self.global_step-1, self._grad_acc_steps):
                 self.zero_grad()
 
-            with torch.autograd.detect_anomaly():
+            # with torch.autograd.detect_anomaly():
+            with torch.enable_grad():
                 # forward phase
                 ret_tuple = self.experiment.model.train_step(
                     batch   = batch,

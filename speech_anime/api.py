@@ -1,15 +1,16 @@
 import os
 import torch
 import saber
-import saberspeech
 import multiprocessing
-from .tools import configure, generate
+from .tools import configure
+from .model import SaberSpeechDrivenAnimation
+from .datasets import DatasetSlidingWindow
 
 
 def train_model(args):
-    hparams, class_dict = configure(args)
-    model_class = class_dict["model"]
-    dataset_class = class_dict["dataset"]
+    hparams = configure(args)
+    model_class   = SaberSpeechDrivenAnimation
+    dataset_class = DatasetSlidingWindow
 
     assert hparams.get("tag") is not None
     # get missing args from hparams
@@ -22,9 +23,9 @@ def train_model(args):
         check_root = os.path.join(hparams.log_dir, "checkpoints")
         hparams.set_key("load_from", saber.filesystem.maybe_in_dirs(
             hparams.load_from,
-            possible_roots=[check_root],
-            possible_exts=[".ckpt"],
-            must_be_found=True,
+            possible_roots = [check_root],
+            possible_exts  = [".ckpt"],
+            must_be_found  = True,
         ))
 
     train_loaders = dict()
@@ -72,61 +73,35 @@ def train_model(args):
 
 
 def evaluate_model(args):
-    hparams, class_dict = configure(args)
+    hparams = configure(args)
+    model_class   = SaberSpeechDrivenAnimation
+    dataset_class = DatasetSlidingWindow
 
     # if load from is given
     if hparams.get("load_from") is not None:
         check_root = os.path.join(hparams.log_dir, "checkpoints")
         hparams.set_key("load_from", saber.filesystem.maybe_in_dirs(
             hparams.load_from,
-            possible_roots=[check_root],
-            possible_exts=[".ckpt"],
-            must_be_found=True,
+            possible_roots = [check_root],
+            possible_exts  = [".ckpt"],
+            must_be_found  = True,
         ))
 
-    dataset_class = class_dict["dataset"]
-    model = class_dict["model"](hparams, trainset=None, validset=None)
-
-    output_dir = os.path.join(hparams.log_dir, "evaluate_videos")
+    model = model_class(hparams, trainset=None, validset=None)
     sources_dict = hparams.trainer.evaluate
 
     exp = saber.Experiment(model, hparams, hparams.log_dir, training=False)
-
-    exp.saber_model.eval()
-    generate(
-        exp.saber_model,
-        output_dir,
+    exp.saber_model.evaluate(
         sources_dict,
-        dataset_class
-    )
-
-
-def generate_from_sources(
-    output_dir: str,
-    sources_dict: dict,
-    exp_dir,
-    exp_ckpt,
-    exp_hparams="hparams",
-    **kwargs
-):
-
-    hparams, class_dict = configure(dict(
-        mode           = "generate",
-        log_dir        = exp_dir,
-        load_from      = exp_ckpt,
-        custom_hparams = exp_hparams,
-        save_video     = True,
-    ))
-
-    model = class_dict["model"](hparams, trainset=None, validset=None)
-    dataset_class = class_dict["dataset"]
-
-    exp = saber.Experiment(model, hparams, training=False)
-    exp.saber_model.eval()
-    generate(
-        exp.saber_model,
-        output_dir,
-        sources_dict,
-        dataset_class,
-        **kwargs
+        experiment=None,
+        in_trainer=False,
+        grid_w=args.grid_w,
+        grid_h=args.grid_h,
+        font_size=args.font_size,
+        with_title=args.with_title,
+        draw_truth=args.draw_truth,
+        draw_align=args.draw_align,
+        draw_latent=args.draw_latent,
+        overwrite_video=args.overwrite_video,
+        output_dir=args.output_dir or os.path.join(hparams.log_dir, "evaluate_videos"),
     )

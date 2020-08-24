@@ -1,9 +1,7 @@
 hparams = dict(
-    tag="two_phase",
+    tag="default",
     audio=dict(),
-    anime=dict(
-        default_template_mesh="./saberspeech/datasets/voca/template/FLAME_sample.obj",
-    ),
+    anime=dict(),
     dataset_speech=None,
     dataset_anime=dict(),
     optim=dict(

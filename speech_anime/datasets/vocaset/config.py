@@ -4,7 +4,6 @@ from saber import ConfigDict, mesh
 # set voca template
 _root = os.path.abspath(os.path.dirname(__file__))
 _voca_template = os.path.join(_root, "template", "FLAME_sample.ply")
-# _voca_template = "saberspeech/datasets/voca/templates/FaceTalk_170728_03272_TA.ply"
 _voca_verts, _voca_indices = mesh.read_ply(_voca_template)
 
 hparams: ConfigDict = ConfigDict(template=_voca_verts, tri_indices=_voca_indices)

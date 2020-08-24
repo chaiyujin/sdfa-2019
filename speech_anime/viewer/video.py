@@ -51,6 +51,7 @@ def render_video(
     video_path: str  = None,
     verbose:    bool = True,
     per_frame:  bool = False,
+    **kwargs
 ):
     _margin = 0
     _readers = {}

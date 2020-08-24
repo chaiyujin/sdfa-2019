@@ -1,2 +1,2 @@
-from .model import SaberTwoPhase
+from .model import SaberSpeechDrivenAnimation
 from . import logger

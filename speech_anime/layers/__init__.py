@@ -1,23 +1,21 @@
 import torch
 import saber
 from saber.nn.layers import easy_create
-from .misc import MultiplicativeNoise, PcaUnprojection
-from .pblstm import PyramidBiLSTM
-from .freq_lstm import FreqLstm
-from .attentions import create_self_atten, _Attention
-from .rnn import _create_gru, _create_lstm
 from .lstm2d import LSTM2d
+from .freq_lstm import FreqLstm
+from .rnn import _create_gru, _create_lstm
+from .attentions import create_self_atten, _Attention
+from .misc import MultiplicativeNoise, PcaUnprojection
 
 
 __first_forward__ = dict()
 __support_layers__ = {
-    "lstm2d": LSTM2d,
-    "freq-lstm": FreqLstm,
-    "lstm": _create_lstm,
     "gru": _create_gru,
+    "lstm": _create_lstm,
+    "lstm2d": LSTM2d,
     "attn": create_self_atten,
+    "freq-lstm": FreqLstm,
     "mul-noise": MultiplicativeNoise,
-    "pBLSTM": PyramidBiLSTM,
     **easy_create.LayerParser.__layer_types__
 }
 
@@ -76,7 +74,7 @@ def forward_layer(
         condition = condition.expand(*shape)
         inputs = torch.cat((inputs, condition), dim=cat_dim)
     # forward
-    if isinstance(module, (torch.nn.LSTM, torch.nn.GRU, PyramidBiLSTM)):
+    if isinstance(module, (torch.nn.LSTM, torch.nn.GRU)):
         # return output and hidden state
         ret, _ = module(inputs, **kwargs)
     elif isinstance(module, _Attention):
@@ -97,11 +95,9 @@ def forward_layer(
     return ret
 
 
-def forward(
-    tag, inputs, layers, parsers, training=True,
-    condition=None, align_dict=None, latent_dict=None,
-    **kwargs
-):
+def forward(tag, inputs, layers, parsers, training=True,
+            condition=None, align_dict=None, latent_dict=None,
+            **kwargs):
 
     def _liststr(vals):
         return "(" + ",".join(str(x).rjust(4) for x in vals) + ")"

@@ -2,6 +2,9 @@
 
 ## TODO
 - [ ] experiments/pca
+- [ ] Dump mesh of each frame
+- [ ] Render with blender
+
 
 ## Install dependencies
 Necessary libraries:
