@@ -115,10 +115,11 @@ class SaberSpeechDrivenAnimation(saber.SaberModel):
         output_dir = kwargs.get("output_dir", default_out)
         denoise_audio = kwargs.get("denoise_audio", False)
         overwrite_video = kwargs.get("overwrite_video", True)
-        with_title = kwargs.get("with_title", False)
-        draw_truth = kwargs.get("draw_truth", False)
-        draw_align = kwargs.get("draw_align", False)
-        draw_latent = kwargs.get("draw_latent", False)
+        export_mesh_frames = kwargs.get("export_mesh_frames", not in_trainer)
+        with_title  = kwargs.get("with_title",  in_trainer)
+        draw_truth  = kwargs.get("draw_truth",  in_trainer)
+        draw_align  = kwargs.get("draw_align",  in_trainer)
+        draw_latent = kwargs.get("draw_latent", in_trainer)
         grid_w = kwargs.get("grid_w", 512)
         grid_h = kwargs.get("grid_h", 512)
         font_size = kwargs.get("font_size", 24)
@@ -179,6 +180,16 @@ class SaberSpeechDrivenAnimation(saber.SaberModel):
                     "{}/[{:04d}]{}".format(os.path.dirname(src_args.output), self.current_epoch, os.path.basename(src_args.output))
                     if in_trainer else src_args.output
                 )
+                if export_mesh_frames:
+                    export_dir = os.path.splitext(video_path)[0]
+                    max_frame = int(tslist[-1] * fps / 1000.0)
+                    os.makedirs(export_dir, exist_ok=True)
+                    for i_frame in range(max_frame + 1):
+                        ts = i_frame * 1000.0 / fps
+                        data_frame = saber.stream.seek(ts, tslist, animes)
+                        verts, faces = viewer.frame_to_mesh(data_frame, face_type)
+                        saber.mesh.write_obj(os.path.join(export_dir, f"{i_frame:06d}.obj"), verts, faces)
+
                 viewer.render_video(
                     sources    = render_list,
                     video_fps  = fps,

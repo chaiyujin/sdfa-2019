@@ -2,6 +2,7 @@ assets
 build
 rnnoise
 experiments
+test_out
 *.mp4
 *.wav
 # Byte-compiled / optimized / DLL files
