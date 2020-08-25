@@ -19,6 +19,8 @@ from scipy.ndimage.filters import gaussian_filter1d
 from collections import defaultdict
 from speech_anime.tools import data_info
 from .config import speaker_alias_dict
+from . import mask
+from ... import viewer
 
 
 _train_speakers = ["m0", "f0", "m1", "m2", "f1", "m3", "f2", "f3"]
@@ -290,9 +292,10 @@ def preload_voca(
     for spk, alias in speaker_alias_dict.items():
         saber.log.info("processing", spk)
         spk_root = os.path.join(root, "unposedcleaneddata", alias)
+        if debug_video:
+            viewer.set_template_mesh(os.path.join(root, "templates", f"{alias}.ply"))
         for si in saber.log.tqdm(range(1, 41), desc="sentence"):
-            # if si != 2:
-            #     continue
+            # if si != 2: continue
 
             if spk == "m5" and si == 26:  # data error! missing frame 1
                 continue
@@ -301,7 +304,6 @@ def preload_voca(
             if not os.path.exists(path):
                 continue
 
-            # try:
             outp = data_info.get_path(output_root, spk, "neutral", si-1)
             imgp = os.path.join(output_root, "image", spk, f"{si-1:03d}.png")
             vidp = os.path.join(output_root, "video", spk, f"{si-1:03d}.mp4")
@@ -322,9 +324,6 @@ def preload_voca(
             )
 
             all_info_dicts.append(info_dict)
-            # except Exception as e:
-            #     saber.log.error(e)
-            # break
 
     os.makedirs(output_root, exist_ok=True)
     # if len(speakers) == 1:
@@ -436,8 +435,6 @@ def _collect(
 ):
 
     # get template and fitted zero exp
-    alias = speaker_alias_dict[speaker]
-
     anime_ts_delta = 100
     anime_ends_extra = 50
     anime_smooth_threshold = 150
@@ -616,8 +613,8 @@ def _collect(
         if debug_audio:
             os.makedirs(os.path.dirname(image_path), exist_ok=True)
             saber.visualizer.plot(
-                saber.visualizer.plot_item(signal, title="original", sr=sr), #, aligned_transcription=aligned_transcription),
-                saber.visualizer.plot_item(denoised, title="denoised", sr=sr), #, aligned_transcription=aligned_transcription),
+                saber.visualizer.plot_item(signal, title="original", sr=sr),  #, aligned_transcription=aligned_transcription),
+                saber.visualizer.plot_item(denoised, title="denoised", sr=sr),  #, aligned_transcription=aligned_transcription),
                 saber.visualizer.plot_item(vad, title="vad"),
                 saber.visualizer.plot_item(
                     audio_utils.features.get("mel", signal, sr, win_size=1024, hop_size=128),
@@ -657,8 +654,10 @@ def _collect(
                 return feat
 
             with open(output_path + "_audio", "rb") as fp:
-                _vis_data = pickle.get_speaker_alias
+                _vis_data = pickle.load(fp)
             _vis_images = []
+            _vis_tslist = []
+            _vis_frames = []
             sliding_size = 128 * 64 + (1024 - 128)
             fi = 0
             while int(fi * sr / 60.0) < len(_vis_data["audio"]):
@@ -679,20 +678,18 @@ def _collect(
                 _vis_images.append(img)
 
             _vis_true_data = dict(
-                title       = "",
-                audio       = _vis_data["audio"],
-                voca_verts  = _vis_frames,
-                voca_tslist = _vis_tslist,
-                voca_verts_is_offset= True,
+                title         = "offsets + template",
+                audio         = _vis_data["audio"],
+                verts_off_3d  = _vis_frames,
+                tslist        = _vis_tslist,
             )
             _imgdata = dict(
                 title       = 'image',
                 images      = _vis_images,
                 tslist      = _vis_tslist,
             )
-            from ...viewer import render_video
             os.makedirs(os.path.dirname(video_path), exist_ok=True)
-            render_video([_vis_true_data, _imgdata], 60, sr, save_video=True, video_path=video_path, verbose=False)
+            viewer.render_video([_vis_true_data, _imgdata], 60, sr, save_video=True, video_path=video_path, verbose=False)
 
     else:
 
@@ -701,37 +698,37 @@ def _collect(
             start_ts = cached["start_ts"]
             signal = cached["audio"]
 
-        if "audio_8k" not in cached or "audio_denoised_8k" not in cached or "audio_ps" not in cached:
-            sr8k_signal = librosa.resample(cached["audio"], cached["sr"], 8000)
-            sr8k_audio_denoised = librosa.resample(cached["audio_denoised"], cached["sr"], 8000)
+        # if "audio_8k" not in cached or "audio_denoised_8k" not in cached or "audio_ps" not in cached:
+        #     sr8k_signal = librosa.resample(cached["audio"], cached["sr"], 8000)
+        #     sr8k_audio_denoised = librosa.resample(cached["audio_denoised"], cached["sr"], 8000)
 
-            audio_sr_u4 = librosa.effects.pitch_shift(cached["audio"], cached["sr"], 4)
-            audio_sr_u2 = librosa.effects.pitch_shift(cached["audio"], cached["sr"], 2)
-            audio_sr_d2 = librosa.effects.pitch_shift(cached["audio"], cached["sr"], -2)
-            audio_sr_d4 = librosa.effects.pitch_shift(cached["audio"], cached["sr"], -4)
+        #     audio_sr_u4 = librosa.effects.pitch_shift(cached["audio"], cached["sr"], 4)
+        #     audio_sr_u2 = librosa.effects.pitch_shift(cached["audio"], cached["sr"], 2)
+        #     audio_sr_d2 = librosa.effects.pitch_shift(cached["audio"], cached["sr"], -2)
+        #     audio_sr_d4 = librosa.effects.pitch_shift(cached["audio"], cached["sr"], -4)
 
-            audio_8k_u4 = librosa.effects.pitch_shift(sr8k_signal, 8000, 4)
-            audio_8k_u2 = librosa.effects.pitch_shift(sr8k_signal, 8000, 2)
-            audio_8k_d2 = librosa.effects.pitch_shift(sr8k_signal, 8000, -2)
-            audio_8k_d4 = librosa.effects.pitch_shift(sr8k_signal, 8000, -4)
+        #     audio_8k_u4 = librosa.effects.pitch_shift(sr8k_signal, 8000, 4)
+        #     audio_8k_u2 = librosa.effects.pitch_shift(sr8k_signal, 8000, 2)
+        #     audio_8k_d2 = librosa.effects.pitch_shift(sr8k_signal, 8000, -2)
+        #     audio_8k_d4 = librosa.effects.pitch_shift(sr8k_signal, 8000, -4)
 
-            with open(output_path + "_audio", "wb") as fp:
-                pickle.dump(dict(
-                    sr=cached["sr"],
-                    audio=cached["audio"],
-                    audio_8k=sr8k_signal,
-                    audio_denoised=cached["audio_denoised"],
-                    audio_denoised_8k=sr8k_audio_denoised,
-                    audio_ps_u4=audio_sr_u4,
-                    audio_ps_u2=audio_sr_u2,
-                    audio_ps_d2=audio_sr_d2,
-                    audio_ps_d4=audio_sr_d4,
-                    audio_8k_ps_u4=audio_8k_u4,
-                    audio_8k_ps_u2=audio_8k_u2,
-                    audio_8k_ps_d2=audio_8k_d2,
-                    audio_8k_ps_d4=audio_8k_d4,
-                    start_ts=cached["start_ts"],  # untouched
-                ), fp)
+        #     with open(output_path + "_audio", "wb") as fp:
+        #         pickle.dump(dict(
+        #             sr=cached["sr"],
+        #             audio=cached["audio"],
+        #             audio_8k=sr8k_signal,
+        #             audio_denoised=cached["audio_denoised"],
+        #             audio_denoised_8k=sr8k_audio_denoised,
+        #             audio_ps_u4=audio_sr_u4,
+        #             audio_ps_u2=audio_sr_u2,
+        #             audio_ps_d2=audio_sr_d2,
+        #             audio_ps_d4=audio_sr_d4,
+        #             audio_8k_ps_u4=audio_8k_u4,
+        #             audio_8k_ps_u2=audio_8k_u2,
+        #             audio_8k_ps_d2=audio_8k_d2,
+        #             audio_8k_ps_d4=audio_8k_d4,
+        #             start_ts=cached["start_ts"],  # untouched
+        #         ), fp)
 
     npy_files = saber.filesystem.find_files(output_path, r"-*\d+\.npy")
     frames = sorted([int(os.path.splitext(os.path.basename(f))[0]) for f in npy_files])
@@ -783,7 +780,6 @@ def generate_dgrad(offsets_root, dgrad_root):
     voca_root = os.path.dirname(__file__)
     for speaker in speakers:
         print("->", speaker)
-        spk_root = os.path.join(offsets_root, "data", speaker, "neutral")
         spk_template, spk_faces = saber.mesh.read_mesh(
             os.path.join(voca_root, "/templates/{}.ply".format(speaker_alias_dict.get(speaker))),
             dtype=np.float32

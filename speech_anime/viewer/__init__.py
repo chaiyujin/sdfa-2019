@@ -7,9 +7,8 @@
     marks_off_2d
 """
 
-from .frame import (
-    render_frame,
-    frame_to_mesh,
-    set_template_mesh,
-)
+# mesh tools
+from .frame import set_template_mesh, frame_to_mesh
+# render tools
+from .frame import render_frame
 from .video import render_video

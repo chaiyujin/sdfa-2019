@@ -8,10 +8,12 @@ import numpy as np
 from tqdm import tqdm
 from ..tools import FaceDataType
 from ..datasets.vocaset.mask import non_face
-try:
-    from . import cpp_render as renderer
-except Exception:
-    renderer = None
+# try:
+#     from . import render_cpp as renderer
+# except ImportError:
+#     from . import render_py as renderer
+from . import render_py as renderer
+
 
 _template_verts, _template_faces = None, None
 
@@ -35,6 +37,9 @@ def set_template_mesh(template_path):
     verts, faces = saber.mesh.read_mesh(template_path, dtype=np.float32)
     set_dgrad_static(verts, faces)
     if renderer is not None:
+        if os.path.splitext(template_path)[1] != '.obj':
+            template_path = os.path.splitext(template_path)[0] + ".obj"
+            saber.mesh.write_obj(template_path, verts, faces)
         renderer.set_template(template_path)
 
 
@@ -87,7 +92,7 @@ def frame_to_mesh(data_frame, face_data_type):
         raise NotImplementedError(f"{face_data_type} is not supported!")
 
 
-def render_frame(frame, face_data_type, image_size: tuple = (500, 500)):
+def render_frame(frame, face_data_type, image_size: tuple = (512, 512)):
     # check frame type
     if torch.is_tensor(frame):
         frame = frame.detach().cpu().numpy()
@@ -99,8 +104,8 @@ def render_frame(frame, face_data_type, image_size: tuple = (500, 500)):
     if FaceDataType.is_mesh(face_data_type):
         assert renderer is not None
         verts, _ = frame_to_mesh(frame, face_data_type)
-        img = renderer.render_mesh(verts, faces=None)
+        img = renderer.render_mesh(verts, faces=None, image_size=image_size)
     else:
         raise NotImplementedError()
     # resize and return
-    return cv2.resize(img, image_size)
+    return img

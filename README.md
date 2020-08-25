@@ -1,8 +1,7 @@
 # sdfa-2019
 
 ## TODO
-- [ ] experiments/pca
-- [ ] Clean viewer
+- [ ] upload pca-pretrained
 - [ ] Dump mesh of each frame
 - [ ] Render with blender
 

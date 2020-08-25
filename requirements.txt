@@ -1,5 +1,7 @@
-torch
+torch >= 1.4.0
 tensorboard
 pysoundfile
-librosa
+librosa == 0.8.0
+pyrender == 0.1.43
+tqdm
 psutil

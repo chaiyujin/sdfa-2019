@@ -19,46 +19,53 @@ def dump_video(template, dg_prefix, of_prefix, output_path):
     if os.path.exists(output_path):
         return
 
-    if not os.path.exists(of_prefix + '_audio'):
+    sources = []
+
+    if os.path.exists(dg_prefix + "_audio"):
+        dg_src = dict(
+            title="dg",
+            audio=None,
+            dgrad_3d=[],
+            tslist=[],
+        )
+
+        with open(dg_prefix + '_audio', "rb") as fp:
+            data = pickle.load(fp)
+            dg_src["audio"] = data["audio"]
+            start_ts = data["start_ts"]
+
+        npy_list = fs.find_files(dg_prefix, r"^\d+\.npy$", False, True)
+        for i, npy_file in enumerate(saber.log.tqdm(npy_list, leave=False)):
+            frame_id = int(os.path.splitext(os.path.basename(npy_file))[0])
+            dg_src["dgrad_3d"].append(np.load(npy_file))
+            dg_src["tslist"].append(float(frame_id * 1000.0) / 60.0 - start_ts)
+
+        sources.append(dg_src)
+
+    if os.path.exists(of_prefix + "_audio"):
+        offs_src = dict(
+            title="offsets",
+            audio=None,
+            verts_off_3d=[],
+            tslist=[],
+        )
+
+        with open(of_prefix + '_audio', "rb") as fp:
+            data = pickle.load(fp)
+            offs_src["audio"] = data["audio"]
+            start_ts = data["start_ts"]
+
+        npy_list = fs.find_files(of_prefix, r"\d+\.npy", False, True)
+        for i, npy_file in enumerate(saber.log.tqdm(npy_list, leave=False)):
+            frame_id = int(os.path.splitext(os.path.basename(npy_file))[0])
+            offs_src["verts_off_3d"].append(np.load(npy_file))
+            offs_src["tslist"].append(float(frame_id * 1000.0) / 60.0 - start_ts)
+
+        sources.append(offs_src)
+
+    if len(sources) == 0:
         return
 
-    dg_src = dict(
-        title="dg",
-        audio=None,
-        dgrad_3d=[],
-        tslist=[],
-    )
-
-    with open(dg_prefix + '_audio', "rb") as fp:
-        data = pickle.load(fp)
-        dg_src["audio"] = data["audio"]
-        start_ts = data["start_ts"]
-
-    npy_list = fs.find_files(dg_prefix, r"^\d+\.npy$", False, True)
-    for i, npy_file in enumerate(saber.log.tqdm(npy_list, leave=False)):
-        frame_id = int(os.path.splitext(os.path.basename(npy_file))[0])
-        dg_src["dgrad_3d"].append(np.load(npy_file))
-        dg_src["tslist"].append(float(frame_id * 1000.0) / 60.0 - start_ts)
-
-    offs_src = dict(
-        title="offsets",
-        audio=None,
-        verts_off_3d=[],
-        tslist=[],
-    )
-
-    with open(of_prefix + '_audio', "rb") as fp:
-        data = pickle.load(fp)
-        offs_src["audio"] = data["audio"]
-        start_ts = data["start_ts"]
-
-    npy_list = fs.find_files(of_prefix, r"\d+\.npy", False, True)
-    for i, npy_file in enumerate(saber.log.tqdm(npy_list, leave=False)):
-        frame_id = int(os.path.splitext(os.path.basename(npy_file))[0])
-        offs_src["verts_off_3d"].append(np.load(npy_file))
-        offs_src["tslist"].append(float(frame_id * 1000.0) / 60.0 - start_ts)
-
-    sources = [dg_src, offs_src]
     viewer.render_video(sources, 60, sample_rate, save_video=True, video_path=output_path, grid_w=780, grid_h=780)
 
 

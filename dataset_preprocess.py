@@ -21,7 +21,7 @@ if __name__ == "__main__":
     clean_voca(
         root=args.source_root,
         clean_root=os.path.join(args.output_root, "clean"),
-        debug_root=os.path.join(args.output_root, "debug"),
+        debug_root=os.path.join(args.output_root, "clean", "debug"),
         sample_rate=args.sample_rate,
         target_db=args.target_db
     )
@@ -31,8 +31,8 @@ if __name__ == "__main__":
         clean_root  = os.path.join(args.output_root, "clean"),
         output_root = os.path.join(args.output_root, "offsets"),
         sample_rate = args.sample_rate,
-        debug_audio = False,
-        debug_video = False,
+        debug_audio = args.debug_audio,
+        debug_video = args.debug_video,
     )
 
     generate_dgrad(

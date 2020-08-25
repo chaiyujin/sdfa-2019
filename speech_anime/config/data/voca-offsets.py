@@ -39,14 +39,12 @@ hparams = dict(
         root            = "assets/voca-sr8k/offsets",
         primary_key     = "npy_data_path:path",
         denoise_audio   = False,
-        rms_normalize   = True,
-        trim_silence    = True,
-        audio_target_db = -24.5,
+        audio_target_db = -24.5,  # make sure same with preprocessed vocaset
         # global settings
         speakers=dict(
-            m0=0, f0=1, m1=2, m2=3,
-            f1=4, m3=5, f2=6, f3=7,
-            f4=8, m4=9,  # valid
+            m0=0,  f0=1, m1=2, m2=3,
+            f1=4,  m3=5, f2=6, f3=7,
+            f4=8,  m4=9,  # valid
             m5=10, f5=11  # test
         ),
         speakers_alias=dict(
