@@ -2,6 +2,7 @@
 
 ## TODO
 - [ ] experiments/pca
+- [ ] Clean viewer
 - [ ] Dump mesh of each frame
 - [ ] Render with blender
 
@@ -38,3 +39,8 @@ python3 -m saberspeech.datasets.voca.preload\
     --source_root <ROOT_VOCASET> \
     --output_root <ROOT_PROCESSED>
 ```
+
+## Pre-trained models
+- [ ] dgrad
+- [ ] offsets
+- [ ] PCA of dgrad, offsets

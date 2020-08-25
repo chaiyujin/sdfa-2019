@@ -6,7 +6,7 @@ from ..tools import PredictionType, FaceDataType
 
 
 class OutputModule(torch.nn.Module):
-    def __init__(self, hparams):
+    def __init__(self, hparams, load_pca):
         super().__init__()
         hp = hparams.model.output
         # check prediction type
@@ -29,12 +29,24 @@ class OutputModule(torch.nn.Module):
             self._rotat_layers, self._rotat_parsers =\
                 layers.build_layers("output-rotat", hp.layers_rotat, hparams)
             if hp.using_pca:
-                self._scale_pca = PcaInversion(*hp.pca_scale, trainable=hp.pca_trainable)
-                self._rotat_pca = PcaInversion(*hp.pca_rotat, trainable=hp.pca_trainable)
+                self._scale_pca = PcaInversion(
+                    *hp.pca_scale, trainable=hp.pca_trainable,
+                    coeffs_dim=self._scale_parsers[-1]["out_channels"],
+                    output_dim=hp.output_dim_scale, load_pca=load_pca
+                )
+                self._rotat_pca = PcaInversion(
+                    *hp.pca_rotat, trainable=hp.pca_trainable,
+                    coeffs_dim=self._rotat_parsers[-1]["out_channels"],
+                    output_dim=hp.output_dim_rotat, load_pca=load_pca
+                )
                 self._scale_pca_size = self._scale_pca.compT.size(1)
         else:
             if hp.using_pca:
-                self._pca = PcaInversion(*hp.pca, trainable=hp.pca_trainable)
+                self._pca = PcaInversion(
+                    *hp.pca, trainable=hp.pca_trainable,
+                    coeffs_dim=self._parsers[-1]["out_channels"],
+                    output_dim=hp.output_dim, load_pca=load_pca
+                )
 
     def forward(self, x, **kwargs):
         assert x.dim() == 3
@@ -78,12 +90,18 @@ class OutputModule(torch.nn.Module):
 
 
 class PcaInversion(torch.nn.Module):
-    def __init__(self, pca_compT, pca_means, trainable):
+    def __init__(self, pca_compT, pca_means, trainable,
+                 coeffs_dim, output_dim, load_pca):
         super().__init__()
-        if isinstance(pca_compT, str): pca_compT = np.load(pca_compT)
-        if isinstance(pca_means, str): pca_means = np.load(pca_means)
-        if isinstance(pca_compT, np.ndarray): pca_compT = pca_compT.astype(np.float32)
-        if isinstance(pca_means, np.ndarray): pca_means = pca_means.astype(np.float32)
+        if load_pca:
+            if isinstance(pca_compT, str): pca_compT = np.load(pca_compT)
+            if isinstance(pca_means, str): pca_means = np.load(pca_means)
+            if isinstance(pca_compT, np.ndarray): pca_compT = pca_compT.astype(np.float32)
+            if isinstance(pca_means, np.ndarray): pca_means = pca_means.astype(np.float32)
+        else:
+            saber.log.warn("PCA is not loaded, use zeros. Make sure load from checkpoint afterwards.")
+            pca_compT = np.zeros((output_dim, coeffs_dim), dtype=np.float32)
+            pca_means = np.zeros((output_dim), dtype=np.float32)
 
         if trainable:
             self.register_parameter("compT", torch.FloatTensor(pca_compT))

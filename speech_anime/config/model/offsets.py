@@ -1,6 +1,6 @@
 _batch_norm = "batch_norm={}".format(dict(momentum=0.01, eps=1e-3))
 hparams = dict(
-    tag="dgrad",
+    tag="offsets",
     audio=dict(
         feature=dict(
             # features
@@ -27,7 +27,7 @@ hparams = dict(
     dataset_speech=None,
     dataset_anime=dict(
         type="voca",
-        name="voca-dgrad",
+        name="voca-offsets",
         train_list=["train.csv"],
         valid_list=["valid.csv"],
     ),
@@ -52,7 +52,7 @@ hparams = dict(
         # model global settings
         verbose=True,
         weight_norm=True,
-        face_data_type="dgrad_3d",
+        face_data_type="verts_off_3d",
         prediction_type="face_data",
         # main modules
         audio_encoder=dict(
@@ -73,23 +73,13 @@ hparams = dict(
             __entirety__=True,
             layers=[
                 ("fc", 520, 512, "act=lrelu@a:0.2", "cat_condition=2"),
-            ],
-            layers_scale=[
-                ("fc", 520, 512, "act=lrelu@a:0.2", "cat_condition=2"),
                 ("fc", 512, 256, "act=tanh"),
-                ("fc", 256, 85,  "act=linear"),
+                ("fc", 256, 59,  "act=linear"),
             ],
-            layers_rotat=[
-                ("fc", 520, 512, "act=lrelu@a:0.2", "cat_condition=2"),
-                ("fc", 512, 256, "act=tanh"),
-                ("fc", 256, 180, "act=linear"),
-            ],
-            output_dim_scale=59856,
-            output_dim_rotat=29928,
+            output_dim=15069,
             using_pca=True,
             pca_trainable=False,
-            pca_scale=("{DATASET_ANIME_ROOT}/pca/scale_compT.npy", "{DATASET_ANIME_ROOT}/pca/scale_means.npy"),
-            pca_rotat=("{DATASET_ANIME_ROOT}/pca/rotat_compT.npy", "{DATASET_ANIME_ROOT}/pca/rotat_means.npy"),
+            pca=("{DATASET_ANIME_ROOT}/pca/compT.npy", "{DATASET_ANIME_ROOT}/pca/means.npy"),
         ),
         # condition: speakers
         speaker_embedding=dict(

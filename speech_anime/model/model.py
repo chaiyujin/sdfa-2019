@@ -17,10 +17,10 @@ from .eval_utils import _prepare_sources_dict, _load_source, _append_images_sour
 class SpeechDrivenAnimation(torch.nn.Module):
     """ audio_feat -> anime_feat model """
 
-    def __init__(self, hparams):
+    def __init__(self, hparams, load_pca):
         super().__init__()
         self._audio_encoder = modules.Configurable(hparams, "audio_encoder")
-        self._output_module = modules.OutputModule(hparams)
+        self._output_module = modules.OutputModule(hparams, load_pca)
         if "speaker_embedding" in hparams.model:
             self._speaker_embedding = modules.SpeakerEmbedding(hparams)
 
@@ -54,9 +54,9 @@ class SpeechDrivenAnimation(torch.nn.Module):
 class SaberSpeechDrivenAnimation(saber.SaberModel):
     """ Handle training, evaluation and other things """
 
-    def __init__(self, hparams, trainset, validset):
+    def __init__(self, hparams, trainset, validset, load_pca=True):
         super().__init__(hparams, trainset, validset)
-        self._model = SpeechDrivenAnimation(hparams)
+        self._model = SpeechDrivenAnimation(hparams, load_pca)
         self._face_type = self._model._output_module._face_type
         self._pred_type = self._model._output_module._pred_type
         self._anime_loss_weight = hparams.loss.get("anime_loss_weight")

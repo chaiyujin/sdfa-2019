@@ -114,6 +114,8 @@ def _maybe_load_dataset_hparams(dataset_type, args, hparams):
             )
 
         # replace root
+        _varn = "{" + f"{dataset_type.upper()}_ROOT" + "}"
         _root = saber_fs.maybe_remove_end_separator(hparams[dataset_type].root)
-        hparams.replace_variable("{" + f"{dataset_type.upper()}_ROOT" + "}", _root)
+        saber.log.info(f"hparams: replace {_varn} into '{_root}'")
+        hparams.replace_variable(_varn, _root)
     return hparams

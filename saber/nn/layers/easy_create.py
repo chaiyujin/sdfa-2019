@@ -176,7 +176,10 @@ class LayerParser(dict):
                 this_row.append(val)
             rows.append(this_row)
         # generate rows string
-        log.info(title)
+        if len(title) > 0:
+            log.info(title)
+        total_len = sum(cols_width) + len(rows[0]) * 3 + 1
+        log.println('-'*total_len, color=None)
         for r in range(len(rows)):
             for c in range(len(rows[r])):
                 x = rows[r][c]
@@ -188,6 +191,7 @@ class LayerParser(dict):
                 for c, x in enumerate(rows[r])
             ) + "|"
             log.println(rows[r], color=None)
+        log.println('-'*total_len, color=None)
 
 
 # -------------

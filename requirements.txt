@@ -1,0 +1,5 @@
+torch
+tensorboard
+pysoundfile
+librosa
+psutil

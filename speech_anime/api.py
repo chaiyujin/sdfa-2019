@@ -87,7 +87,7 @@ def evaluate_model(args):
             must_be_found  = True,
         ))
 
-    model = model_class(hparams, trainset=None, validset=None)
+    model = model_class(hparams, trainset=None, validset=None, load_pca=False)
     sources_dict = hparams.trainer.evaluate
 
     exp = saber.Experiment(model, hparams, hparams.log_dir, training=False)

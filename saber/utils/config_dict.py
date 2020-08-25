@@ -6,7 +6,6 @@ import datetime
 import argparse
 import numpy as np
 
-
 # -------------
 # ConfigDict object
 # -------------

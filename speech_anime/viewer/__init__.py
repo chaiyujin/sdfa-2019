@@ -10,7 +10,6 @@
 from .frame import (
     render_frame,
     frame_to_mesh,
-    frame_to_landmarks,
     set_template_mesh,
 )
 from .video import render_video

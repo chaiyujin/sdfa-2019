@@ -203,9 +203,8 @@ class DatasetSlidingWindow(SpeechAnimeDataset):
             audio_feat_args["feat_tremolo"] = mel_tremolo
 
         def get_anime(shifted_l, shifted_r):
-            assert self._face_type == "dgrad_3d"
             ts_delta = self.hparams.anime.feature.ts_delta
-            if self._face_type == "dgrad_3d":
+            if self._face_type in ["dgrad_3d", "verts_off_3d"]:
                 ts = self.sample_to_ms((shifted_l+shifted_r)/2)
                 ts = ts - ts_delta + start_ts
                 pos = ts * self.hparams.anime.fps / 1000.0
@@ -269,12 +268,18 @@ class DatasetSlidingWindow(SpeechAnimeDataset):
 
         anime_feat0, ret["anime_weight_0"] = get_anime(l0, r0)
         anime_feat1, ret["anime_weight_1"] = get_anime(l1, r1)
-        anime_feat0 = np.reshape(anime_feat0, (-1, 9))
-        anime_feat1 = np.reshape(anime_feat1, (-1, 9))
-        ret["dgrad_3d_scale_0"] = np.expand_dims(anime_feat0[:, :6], axis=0)
-        ret["dgrad_3d_rotat_0"] = np.expand_dims(anime_feat0[:, 6:], axis=0)
-        ret["dgrad_3d_scale_1"] = np.expand_dims(anime_feat1[:, :6], axis=0)
-        ret["dgrad_3d_rotat_1"] = np.expand_dims(anime_feat1[:, 6:], axis=0)
+        if self._face_type == "dgrad_3d":
+            anime_feat0 = np.reshape(anime_feat0, (-1, 9))
+            anime_feat1 = np.reshape(anime_feat1, (-1, 9))
+            ret["dgrad_3d_scale_0"] = np.expand_dims(anime_feat0[:, :6], axis=0)
+            ret["dgrad_3d_rotat_0"] = np.expand_dims(anime_feat0[:, 6:], axis=0)
+            ret["dgrad_3d_scale_1"] = np.expand_dims(anime_feat1[:, :6], axis=0)
+            ret["dgrad_3d_rotat_1"] = np.expand_dims(anime_feat1[:, 6:], axis=0)
+        elif self._face_type == "verts_off_3d":
+            ret["verts_off_3d_0"] = np.expand_dims(anime_feat0, axis=0)
+            ret["verts_off_3d_1"] = np.expand_dims(anime_feat1, axis=0)
+        else:
+            raise NotImplementedError()
 
         return ret
 

@@ -48,7 +48,15 @@ def build_layers(tag, layer_info_list, hparams):
         layers.append(module)
         parsers.append(parser)
     if verbose:
-        saber.nn.layers.LayerParser.print_table(f"build '{tag}'", *parsers)
+        # split parsers by lstm and attn layers
+        sub_parsers_list = [[]]
+        for parser in parsers:
+            if (parser.name.find("lstm") >= 0 or parser.name.find("attn") >= 0) and len(sub_parsers_list[-1]) > 0:
+                sub_parsers_list.append([])
+            sub_parsers_list[-1].append(parser)
+        for i_sub, sub_parsers in enumerate(sub_parsers_list):
+            title = f"build '{tag}'" if i_sub == 0 else ""
+            saber.nn.layers.LayerParser.print_table(title, *sub_parsers)
     return layers, parsers
 
 

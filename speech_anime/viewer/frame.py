@@ -87,24 +87,7 @@ def frame_to_mesh(data_frame, face_data_type):
         raise NotImplementedError(f"{face_data_type} is not supported!")
 
 
-def frame_to_landmarks(data_frame, face_data_type):
-    raise NotImplementedError(f"{face_data_type} is not supported!")
-
-
-def _render(data_frame, face_data_type):
-    if FaceDataType.is_mesh(face_data_type):
-        assert renderer is not None
-        verts, _ = frame_to_mesh(data_frame, face_data_type)
-        return renderer.render_mesh(verts, faces=None)
-    else:
-        raise NotImplementedError()
-
-
-def render_frame(
-    frame,
-    face_data_type,
-    image_size: tuple = (500, 500)
-):
+def render_frame(frame, face_data_type, image_size: tuple = (500, 500)):
     # check frame type
     if torch.is_tensor(frame):
         frame = frame.detach().cpu().numpy()
@@ -113,5 +96,11 @@ def render_frame(
     if isinstance(face_data_type, str):
         face_data_type = FaceDataType[face_data_type]
     # render
-    img = _render(frame, face_data_type)
+    if FaceDataType.is_mesh(face_data_type):
+        assert renderer is not None
+        verts, _ = frame_to_mesh(frame, face_data_type)
+        img = renderer.render_mesh(verts, faces=None)
+    else:
+        raise NotImplementedError()
+    # resize and return
     return cv2.resize(img, image_size)

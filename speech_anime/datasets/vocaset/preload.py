@@ -839,7 +839,25 @@ def generate_dgrad(offsets_root, dgrad_root):
 
 
 def pca_offsets(offsets_root, step=1):
+    from psutil import virtual_memory
     from sklearn.decomposition import PCA, IncrementalPCA
+
+    _filepath_compT = os.path.join(offsets_root, "pca", "compT.npy")
+    _filepath_means = os.path.join(offsets_root, "pca", "means.npy")
+    if os.path.exists(_filepath_compT) and os.path.exists(_filepath_means):
+        saber.log.info("PCA of offsets if already calculated.")
+        return
+
+    # check memory
+    mem = virtual_memory()
+    available_gb = mem.available / (1024 * 1024 * 1024)
+    if available_gb < 20:
+        raise MemoryError(
+            "To compuate pca of offsets, at least 20GB memory is necessary,"
+            f" but only {available_gb:.1f} avaliable.\n"
+            f"{' ' * 13}You can download the pre-trained pca from url in README.md"
+        )
+
     csv_file = os.path.join(offsets_root, "train.csv")
     meta_data, info_list = saber.csv.read_csv(csv_file)
 
@@ -864,13 +882,37 @@ def pca_offsets(offsets_root, step=1):
     print(pca.explained_variance_ratio_.cumsum()[-1], len(pca.explained_variance_ratio_))
     saber.log.info("compT: {}, means: {}".format(pca.components_.T.shape, pca.mean_.shape))
     os.makedirs(os.path.join(offsets_root, "pca"), exist_ok=True)
-    np.save(os.path.join(offsets_root, "pca", "compT.npy"), pca.components_.T)
-    np.save(os.path.join(offsets_root, "pca", "means.npy"), pca.mean_)
+    np.save(_filepath_compT, pca.components_.T)
+    np.save(_filepath_means, pca.mean_)
 
 
 def pca_dgrad(dgrad_root, step=1):
+    from psutil import virtual_memory
     from sklearn.decomposition import PCA, IncrementalPCA
-    step = 1
+
+    _filepath_scale_compT = os.path.join(dgrad_root, "pca", "scale_compT.npy")
+    _filepath_scale_means = os.path.join(dgrad_root, "pca", "scale_means.npy")
+    _filepath_rotat_compT = os.path.join(dgrad_root, "pca", "rotat_compT.npy")
+    _filepath_rotat_means = os.path.join(dgrad_root, "pca", "rotat_means.npy")
+    if (
+        os.path.exists(_filepath_scale_compT) and
+        os.path.exists(_filepath_scale_means) and
+        os.path.exists(_filepath_rotat_compT) and
+        os.path.exists(_filepath_rotat_means)
+    ):
+        saber.log.info("PCA of dgrad if already calculated.")
+        return
+
+    # check memory
+    mem = virtual_memory()
+    available_gb = mem.available / (1024 * 1024 * 1024)
+    if available_gb < 70:
+        raise MemoryError(
+            "To compuate pca of dgrads, at least 70GB memory is necessary,"
+            f" but only {available_gb:.1f} avaliable\n"
+            f"{' ' * 13}You can download the pre-trained pca from url in README.md"
+        )
+
     csv_file = os.path.join(dgrad_root, "train.csv")
     meta_data, info_list = saber.csv.read_csv(csv_file)
 
