@@ -3,8 +3,10 @@ build
 rnnoise
 experiments
 test_out
+null
 *.mp4
 *.wav
+*.blend1
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
