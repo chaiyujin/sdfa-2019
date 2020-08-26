@@ -91,6 +91,16 @@ def evaluate_model(args):
     sources_dict = hparams.trainer.evaluate
 
     exp = saber.Experiment(model, hparams, hparams.log_dir, training=False)
+
+    # trace
+    if args.get("traced_dump_path") is not None:
+        exp.saber_model._model.eval()
+        audio_feat, speaker_id = torch.rand(100, 64, 128, 3, device="cuda:0"), torch.zeros(100, dtype=torch.long, device="cuda:0")
+        traced_model = torch.jit.trace(exp.saber_model._model, (audio_feat, speaker_id))
+        traced_model(audio_feat, speaker_id)  # test forward
+        traced_model.save(args.traced_dump_path)
+        exp.saber_model._traced_model = traced_model
+
     exp.saber_model.evaluate(
         sources_dict,
         experiment=None,
@@ -105,3 +115,32 @@ def evaluate_model(args):
         overwrite_video=args.overwrite_video,
         output_dir=args.output_dir or os.path.join(hparams.log_dir, "evaluate_videos"),
     )
+
+
+def jit_trace(args):
+    hparams = configure(args)
+    model_class   = SaberSpeechDrivenAnimation
+    dataset_class = DatasetSlidingWindow
+
+    # if load from is given
+    if hparams.get("load_from") is not None:
+        check_root = os.path.join(hparams.log_dir, "checkpoints")
+        hparams.set_key("load_from", saber.filesystem.maybe_in_dirs(
+            hparams.load_from,
+            possible_roots = [check_root],
+            possible_exts  = [".ckpt"],
+            must_be_found  = True,
+        ))
+    
+    assert args.get("traced_dump_path") is not None
+
+    model = model_class(hparams, trainset=None, validset=None, load_pca=False)
+    exp = saber.Experiment(model, hparams, hparams.log_dir, training=False)
+
+    # trace
+    exp.saber_model._model.eval()
+    audio_feat, speaker_id = torch.rand(100, 64, 128, 3, device="cuda:0"), torch.zeros(100, dtype=torch.long, device="cuda:0")
+    traced_model = torch.jit.trace(exp.saber_model._model, (audio_feat, speaker_id))
+    # test forward
+    traced_model(audio_feat, speaker_id)
+    traced_model.save(args.traced_dump_path)

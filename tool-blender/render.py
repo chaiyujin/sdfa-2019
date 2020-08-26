@@ -67,7 +67,7 @@ if __name__ == "__main__":
     # blender -b  render_flame.blend --python script.py --render-anim -- --output_prefix render_ --image_size 512 --source_dir ../test_out/test-000
     parser = utils.ArgumentParserForBlender()
     parser.add_argument("-S", "--source_dir",     type=str,   required=True)
-    parser.add_argument("-O", "--output_prefix",  type=str,   default="./out_")
+    parser.add_argument("-O", "--output_prefix",  type=str,   default=None)
     parser.add_argument("-N", "--num_max_frames", type=int,   )
     parser.add_argument(      "--image_size",     type=int,   default=512)
     parser.add_argument(      "--render_samples", type=int,   default=8)
@@ -82,10 +82,22 @@ if __name__ == "__main__":
     mesh_files = sorted(mesh_files, key=lambda x: int(os.path.basename(os.path.splitext(x)[0])))
     num_frames = len(mesh_files) if args.num_max_frames is None else args.num_max_frames
 
+    if num_frames == 0:
+        print("(!) Failed to find any frames in '{}'".format(args.source_dir))
+        quit()
+
+    audio_path = os.path.join(args.source_dir, "audio.wav")
+    if not os.path.exists(audio_path):
+        print("(!) Failed to audio '{}'".format(audio_path))
+        quit()
+
     # Setting
     scene = bpy.context.scene
     camera_object = bpy.data.objects["Camera"]
     flame_object = bpy.data.objects["FLAME_sample"]
+
+    # TODO: sound track
+    # soundstrip = scene.sequence_editor.sequences.new_sound("audio", audio_path, 1, 1)
 
     # Shading mode: smooth / flat
     if args.smooth_shading:
@@ -99,10 +111,15 @@ if __name__ == "__main__":
         m.quality = 3
 
     # Set output and render
-    set_output_properties(scene, args.image_size, args.output_prefix)
+    output_prefix = (
+        args.output_prefix if args.output_prefix is not None else
+        os.path.dirname(mesh_files[0]) + "_"
+    )
+    set_output_properties(scene, args.image_size, output_prefix)
     set_eevee_renderer(scene, camera_object,
                        num_samples=args.render_samples,
                        small_size=args.small_size)
+    print("(+) Render video: {}<start>-<end>.mp4".format(output_prefix))
 
     # Create animation
     action = bpy.data.actions.new("MeshAnimation")
@@ -123,7 +140,7 @@ if __name__ == "__main__":
     for i in range(num_frames):
         co_list[:, i*2+0] = i + 1
         co_list[:, i*2+1] = utils.read_obj(mesh_files[i], num_verts).flatten()
-        print(f"Read keyframe {i+1}", end='\r')
+        print("(+) Read keyframe {}".format(i+1), end='\r')
     # foreach set
     for fcu, vals in zip(fcurves_list, co_list):
         fcu.keyframe_points.foreach_set('co', vals)

@@ -24,10 +24,8 @@ class SpeechDrivenAnimation(torch.nn.Module):
         if "speaker_embedding" in hparams.model:
             self._speaker_embedding = modules.SpeakerEmbedding(hparams)
 
-    def forward(self, audio_feat, speaker_id):
+    def forward(self, audio_feat, speaker_id, align_dict=None, latent_dict=None):
         condition = None
-        align_dict = dict()
-        latent_dict = dict()
         if speaker_id is not None and hasattr(self, "_speaker_embedding"):
             condition = self._speaker_embedding(speaker_id)
 
@@ -43,12 +41,7 @@ class SpeechDrivenAnimation(torch.nn.Module):
             align_dict=align_dict,
             latent_dict=latent_dict
         )
-        return dict(
-            prediction=preds,
-            condition=condition,
-            align_dict=align_dict,
-            latent_dict=latent_dict,
-        )
+        return preds, condition
 
 
 class SaberSpeechDrivenAnimation(saber.SaberModel):
@@ -83,9 +76,33 @@ class SaberSpeechDrivenAnimation(saber.SaberModel):
         self._loss_fns["dyn_e"] = DynamicLossScaler()
 
     def forward(self, batch):
-        return self._model(
-            audio_feat=batch["audio_feat"],
-            speaker_id=batch["speaker_id"]
+        align_dict = dict()
+        latent_dict = dict()
+        if not self.training and hasattr(self, "_traced_model"):
+            preds, condition = self._traced_model(batch["audio_feat"], batch["speaker_id"])
+        else:
+            preds, condition = self._model(
+                audio_feat=batch["audio_feat"],
+                speaker_id=batch["speaker_id"],
+                align_dict=align_dict,
+                latent_dict=latent_dict
+            )
+        # make preds into dict
+        pred_dict = dict()
+        postfix = "_pca" if self._model._output_module._return_pca else ""
+        if self._face_type == FaceDataType.dgrad_3d:
+            assert len(preds) == 2
+            pred_dict[f"dgrad_3d_scale{postfix}"] = preds[0]
+            pred_dict[f"dgrad_3d_rotat{postfix}"] = preds[1]
+        else:
+            assert len(preds) == 1
+            pred_dict[f"{self._face_type.name}{postfix}"] = preds[0]
+        # return
+        return dict(
+            prediction=pred_dict,
+            condition=condition,
+            align_dict=align_dict,
+            latent_dict=latent_dict,
         )
 
     def train_step(self, batch, i_batch):
@@ -182,6 +199,7 @@ class SaberSpeechDrivenAnimation(saber.SaberModel):
                 )
                 if export_mesh_frames:
                     export_dir = os.path.splitext(video_path)[0]
+                    saber.audio.save(os.path.join(export_dir, "audio.wav"), sound_signal, 44100)
                     max_frame = int(tslist[-1] * fps / 1000.0)
                     os.makedirs(export_dir, exist_ok=True)
                     for i_frame in range(max_frame + 1):

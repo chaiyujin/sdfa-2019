@@ -77,16 +77,18 @@ class OutputModule(torch.nn.Module):
             if self._using_pca and (not self._return_pca):
                 x_scale = self._scale_pca(x_scale).view(N, L, -1, 6)
                 x_rotat = self._rotat_pca(x_rotat).view(N, L, -1, 3)
-            postfix = "_pca" if self._return_pca else ""
-            return {
-                f"dgrad_3d_scale{postfix}": x_scale,
-                f"dgrad_3d_rotat{postfix}": x_rotat
-            }
+            return x_scale, x_rotat
+            # postfix = "_pca" if self._return_pca else ""
+            # return {
+            #     f"dgrad_3d_scale{postfix}": x_scale,
+            #     f"dgrad_3d_rotat{postfix}": x_rotat
+            # }
         else:
             if self._using_pca and (not self._return_pca):
                 x = self._pca(x)
-            postfix = "_pca" if self._return_pca else ""
-            return {f"{self._face_type.name}{postfix}": x}
+            return x
+            # postfix = "_pca" if self._return_pca else ""
+            # return {f"{self._face_type.name}{postfix}": x}
 
 
 class PcaInversion(torch.nn.Module):

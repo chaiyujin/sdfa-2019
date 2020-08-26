@@ -9,8 +9,6 @@ import numpy as np
 import saber.utils.filesystem as saber_fs
 from .. import viewer
 
-
-__supported_running_modes__ = ["train", "evaluate", "generate"]
 __root__ = os.path.abspath(saber_fs.ancestor(__file__, level=2))
 
 
@@ -30,8 +28,6 @@ def configure(args) -> saber.ConfigDict:
 
     # check mode in args
     mode = args.get("mode")
-    assert mode in __supported_running_modes__,\
-        f"args.mode '{mode}' is not in supported '{__supported_running_modes__}'"
 
     # find custom hparams
     if args.get("custom_hparams") is not None:

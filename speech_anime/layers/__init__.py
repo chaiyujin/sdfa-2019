@@ -90,7 +90,7 @@ def forward_layer(
         x = inputs
         _ahead = parser.query_radius - 1
         _after = parser.query_radius
-        mid = x.size(1)//2 + parser.get("query_offset", 0)
+        mid = int(x.size(1))//2 + parser.get("query_offset", 0)
         stt = mid - _ahead
         end = mid + _after
         query = x[:, stt: end, :]
