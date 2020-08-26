@@ -781,7 +781,7 @@ def generate_dgrad(offsets_root, dgrad_root):
     for speaker in speakers:
         print("->", speaker)
         spk_template, spk_faces = saber.mesh.read_mesh(
-            os.path.join(voca_root, "/templates/{}.ply".format(speaker_alias_dict.get(speaker))),
+            os.path.join(voca_root, "templates/{}.ply".format(speaker_alias_dict.get(speaker))),
             dtype=np.float32
         )
 
