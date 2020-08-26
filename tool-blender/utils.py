@@ -1,5 +1,51 @@
+import os
 import sys
+import time
 import argparse
+import numpy as np
+
+
+class timeit(object):
+    def __init__(self, tag="timeit"):
+        self.tag = tag
+
+    def __enter__(self):
+        self.ts = time.time()
+
+    def __exit__(self, *args):
+        self.te = time.time()
+        print('<{}> cost {:.2f} ms'.format(
+            self.tag, (self.te - self.ts) * 1000))
+        return False
+
+    def __call__(self, method):
+        def timed(*args, **kw):
+            ts = time.time()
+            result = method(*args, **kw)
+            te = time.time()
+            print('<{}> cost {:.2f} ms'.format(
+                method.__name__, (te - ts) * 1000))
+            return result
+        return timed
+
+
+def read_obj(filename_obj, num_verts):
+    # load vertices
+    with open(filename_obj) as f:
+        lines = f.readlines()
+
+    vi = 0
+    vertices = np.zeros((num_verts, 3), np.float32)
+    for line in lines:
+        line = line.strip().split()
+        if len(line) == 0:
+            continue
+        if line[0] == 'v':
+            vertices[vi, 0] = float(line[1])
+            vertices[vi, 1] = float(line[2])
+            vertices[vi, 2] = float(line[3])
+            vi += 1
+    return vertices
 
 
 class ArgumentParserForBlender(argparse.ArgumentParser):

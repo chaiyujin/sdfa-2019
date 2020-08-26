@@ -4,10 +4,10 @@ import sys
 import bpy
 import bmesh
 import mathutils
+import numpy as np
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-import meshio
-from argparse_blender import ArgumentParserForBlender
+import utils
 
 
 def set_output_properties(scene: bpy.types.Scene, image_size: int = 512, output_file_path: str = "") -> None:
@@ -65,20 +65,22 @@ def find_files(directory, pattern, recursive=True, abspath=False):
 
 if __name__ == "__main__":
     # blender -b  render_flame.blend --python script.py --render-anim -- --output_prefix render_ --image_size 512 --source_dir ../test_out/test-000
-    parser = ArgumentParserForBlender()
+    parser = utils.ArgumentParserForBlender()
     parser.add_argument("-S", "--source_dir",     type=str,   required=True)
     parser.add_argument("-O", "--output_prefix",  type=str,   default="./out_")
+    parser.add_argument("-N", "--num_max_frames", type=int,   )
     parser.add_argument(      "--image_size",     type=int,   default=512)
     parser.add_argument(      "--render_samples", type=int,   default=8)
     parser.add_argument(      "--fps",            type=float, default=60)
     parser.add_argument(      "--smooth_shading", action="store_true")
-    parser.add_argument(      "--small_size",    action="store_true")
+    parser.add_argument(      "--small_size",     action="store_true")
+    parser.add_argument("-Q", "--quiet",          action="store_true")
     args = parser.parse_args()
 
     # Find all frames
     mesh_files = find_files(args.source_dir, r"\d+\.obj", recursive=False, abspath=False)
     mesh_files = sorted(mesh_files, key=lambda x: int(os.path.basename(os.path.splitext(x)[0])))
-    num_frames = len(mesh_files)
+    num_frames = len(mesh_files) if args.num_max_frames is None else args.num_max_frames
 
     # Setting
     scene = bpy.context.scene
@@ -110,22 +112,18 @@ if __name__ == "__main__":
     fcurves_list = []
     for v in flame_object.data.vertices:
         fcurves = [action.fcurves.new(f"vertices[{v.index:d}].co", index = k) for k in range(3)]
-        fcurves_list.append(fcurves)
+        for fcurve in fcurves:
+            fcurve.keyframe_points.add(count=num_frames)
+        fcurves_list.extend(fcurves)
     set_animation(scene, fps=args.fps, frame_start=1, frame_end=num_frames)
 
-    # Insert frames
-    def _insert_keyframe(fcurves, frame, values):
-        for fcu, val in zip(fcurves, values):
-            fcu.keyframe_points.insert(frame, val, options={'FAST'})
-
-    def _mesh_keyframe(obj, fcurves_list, verts, i_frame):
-        for i, v in enumerate(obj.data.vertices):
-            values = verts[i]
-            fcurves = fcurves_list[i]
-            for fcu, val in zip(fcurves, values):
-                fcu.keyframe_points.insert(i_frame, val, options={'FAST'})
-
-    for i_frame, filename in enumerate(mesh_files):
-        print(f"Set keyframe {i_frame}", end='\r')
-        verts, _ = meshio.read_obj(filename)
-        _mesh_keyframe(flame_object, fcurves_list, verts, i_frame + 1)
+    # Set keyframes
+    num_verts = len(flame_object.data.vertices)
+    co_list = np.zeros((num_verts * 3, 2 * num_frames), np.float32)
+    for i in range(num_frames):
+        co_list[:, i*2+0] = i + 1
+        co_list[:, i*2+1] = utils.read_obj(mesh_files[i], num_verts).flatten()
+        print(f"Read keyframe {i+1}", end='\r')
+    # foreach set
+    for fcu, vals in zip(fcurves_list, co_list):
+        fcu.keyframe_points.foreach_set('co', vals)

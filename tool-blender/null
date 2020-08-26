@@ -1,0 +1,1446 @@
+Blender 2.83.1 (hash 8289fc688b3e built 2020-06-25 10:29:26)
+Read prefs: /home/yuki/.config/blender/2.83/config/userpref.blend
+found bundled python: /home/yuki/software/blender-2.83.1-linux64/2.83/python
+Read blend: /home/yuki/Documents/GitHub/sdfa-2019/tool-blender/render_flame.blend
+Fra:1 Mem:275.33M (0.00M, Peak 275.59M) | Time:00:00.19 | Syncing Camera
+Fra:1 Mem:275.33M (0.00M, Peak 275.59M) | Time:00:00.19 | Syncing FLAME_sample
+Fra:1 Mem:276.34M (0.00M, Peak 276.66M) | Time:00:00.19 | Syncing Plane
+Fra:1 Mem:276.34M (0.00M, Peak 276.66M) | Time:00:00.19 | Syncing Area
+Fra:1 Mem:276.34M (0.00M, Peak 276.66M) | Time:00:00.19 | Syncing Point
+Fra:1 Mem:276.34M (0.00M, Peak 276.66M) | Time:00:00.19 | Syncing Sun
+Fra:1 Mem:276.35M (0.00M, Peak 276.66M) | Time:00:00.20 | Rendering 1 / 8 samples
+Fra:1 Mem:275.66M (0.00M, Peak 276.66M) | Time:00:00.22 | Rendering 8 / 8 samples
+Fra:1 Mem:143.03M (0.00M, Peak 276.66M) | Time:00:00.23 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 1
+ Time: 00:00.39 (Saving: 00:00.15)
+
+Fra:2 Mem:275.66M (0.00M, Peak 276.66M) | Time:00:00.06 | Syncing Camera
+Fra:2 Mem:275.66M (0.00M, Peak 276.66M) | Time:00:00.06 | Syncing FLAME_sample
+Fra:2 Mem:276.35M (0.00M, Peak 276.67M) | Time:00:00.06 | Syncing Plane
+Fra:2 Mem:276.35M (0.00M, Peak 276.67M) | Time:00:00.06 | Syncing Area
+Fra:2 Mem:276.35M (0.00M, Peak 276.67M) | Time:00:00.06 | Syncing Point
+Fra:2 Mem:276.35M (0.00M, Peak 276.67M) | Time:00:00.06 | Syncing Sun
+Fra:2 Mem:276.35M (0.00M, Peak 276.67M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:2 Mem:275.67M (0.00M, Peak 276.67M) | Time:00:00.08 | Rendering 8 / 8 samples
+Fra:2 Mem:143.03M (0.00M, Peak 276.67M) | Time:00:00.09 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 2
+ Time: 00:00.09 (Saving: 00:00.00)
+
+Fra:3 Mem:275.66M (0.00M, Peak 276.67M) | Time:00:00.03 | Syncing Camera
+Fra:3 Mem:275.66M (0.00M, Peak 276.67M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:3 Mem:276.35M (0.00M, Peak 276.67M) | Time:00:00.03 | Syncing Plane
+Fra:3 Mem:276.35M (0.00M, Peak 276.67M) | Time:00:00.03 | Syncing Area
+Fra:3 Mem:276.35M (0.00M, Peak 276.67M) | Time:00:00.03 | Syncing Point
+Fra:3 Mem:276.35M (0.00M, Peak 276.67M) | Time:00:00.03 | Syncing Sun
+Fra:3 Mem:276.35M (0.00M, Peak 276.67M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:3 Mem:275.67M (0.00M, Peak 276.67M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:3 Mem:143.04M (0.00M, Peak 276.67M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 3
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:4 Mem:275.66M (0.00M, Peak 276.67M) | Time:00:00.03 | Syncing Camera
+Fra:4 Mem:275.66M (0.00M, Peak 276.67M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:4 Mem:276.35M (0.00M, Peak 276.67M) | Time:00:00.03 | Syncing Plane
+Fra:4 Mem:276.36M (0.00M, Peak 276.67M) | Time:00:00.03 | Syncing Area
+Fra:4 Mem:276.36M (0.00M, Peak 276.67M) | Time:00:00.03 | Syncing Point
+Fra:4 Mem:276.36M (0.00M, Peak 276.67M) | Time:00:00.03 | Syncing Sun
+Fra:4 Mem:276.35M (0.00M, Peak 276.67M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:4 Mem:275.67M (0.00M, Peak 276.67M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:4 Mem:143.04M (0.00M, Peak 276.67M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 4
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:5 Mem:275.66M (0.00M, Peak 276.67M) | Time:00:00.05 | Syncing Camera
+Fra:5 Mem:275.67M (0.00M, Peak 276.67M) | Time:00:00.05 | Syncing FLAME_sample
+Fra:5 Mem:276.35M (0.00M, Peak 276.67M) | Time:00:00.05 | Syncing Plane
+Fra:5 Mem:276.36M (0.00M, Peak 276.67M) | Time:00:00.05 | Syncing Area
+Fra:5 Mem:276.36M (0.00M, Peak 276.67M) | Time:00:00.05 | Syncing Point
+Fra:5 Mem:276.36M (0.00M, Peak 276.67M) | Time:00:00.05 | Syncing Sun
+Fra:5 Mem:276.36M (0.00M, Peak 276.67M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:5 Mem:275.67M (0.00M, Peak 276.67M) | Time:00:00.07 | Rendering 8 / 8 samples
+Fra:5 Mem:143.04M (0.00M, Peak 276.67M) | Time:00:00.08 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 5
+ Time: 00:00.09 (Saving: 00:00.00)
+
+Fra:6 Mem:275.67M (0.00M, Peak 276.67M) | Time:00:00.03 | Syncing Camera
+Fra:6 Mem:275.67M (0.00M, Peak 276.67M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:6 Mem:276.36M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Plane
+Fra:6 Mem:276.36M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Area
+Fra:6 Mem:276.36M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Point
+Fra:6 Mem:276.36M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Sun
+Fra:6 Mem:276.36M (0.00M, Peak 276.68M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:6 Mem:275.68M (0.00M, Peak 276.68M) | Time:00:00.08 | Rendering 8 / 8 samples
+Fra:6 Mem:143.04M (0.00M, Peak 276.68M) | Time:00:00.09 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 6
+ Time: 00:00.10 (Saving: 00:00.00)
+
+Fra:7 Mem:275.67M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Camera
+Fra:7 Mem:275.67M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:7 Mem:276.36M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Plane
+Fra:7 Mem:276.36M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Area
+Fra:7 Mem:276.36M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Point
+Fra:7 Mem:276.36M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Sun
+Fra:7 Mem:276.36M (0.00M, Peak 276.68M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:7 Mem:275.68M (0.00M, Peak 276.68M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:7 Mem:143.05M (0.00M, Peak 276.68M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 7
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:8 Mem:275.67M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Camera
+Fra:8 Mem:275.67M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:8 Mem:276.36M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Plane
+Fra:8 Mem:276.37M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Area
+Fra:8 Mem:276.37M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Point
+Fra:8 Mem:276.37M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Sun
+Fra:8 Mem:276.36M (0.00M, Peak 276.68M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:8 Mem:275.68M (0.00M, Peak 276.68M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:8 Mem:143.05M (0.00M, Peak 276.68M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 8
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:9 Mem:275.67M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Camera
+Fra:9 Mem:275.68M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:9 Mem:276.36M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Plane
+Fra:9 Mem:276.37M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Area
+Fra:9 Mem:276.37M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Point
+Fra:9 Mem:276.37M (0.00M, Peak 276.68M) | Time:00:00.03 | Syncing Sun
+Fra:9 Mem:276.37M (0.00M, Peak 276.68M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:9 Mem:275.68M (0.00M, Peak 276.68M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:9 Mem:143.05M (0.00M, Peak 276.68M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 9
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:10 Mem:275.68M (0.00M, Peak 276.68M) | Time:00:00.05 | Syncing Camera
+Fra:10 Mem:275.68M (0.00M, Peak 276.68M) | Time:00:00.05 | Syncing FLAME_sample
+Fra:10 Mem:276.37M (0.00M, Peak 276.69M) | Time:00:00.05 | Syncing Plane
+Fra:10 Mem:276.37M (0.00M, Peak 276.69M) | Time:00:00.05 | Syncing Area
+Fra:10 Mem:276.37M (0.00M, Peak 276.69M) | Time:00:00.05 | Syncing Point
+Fra:10 Mem:276.37M (0.00M, Peak 276.69M) | Time:00:00.05 | Syncing Sun
+Fra:10 Mem:276.37M (0.00M, Peak 276.69M) | Time:00:00.05 | Rendering 1 / 8 samples
+Fra:10 Mem:275.69M (0.00M, Peak 276.69M) | Time:00:00.07 | Rendering 8 / 8 samples
+Fra:10 Mem:143.05M (0.00M, Peak 276.69M) | Time:00:00.08 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 10
+ Time: 00:00.09 (Saving: 00:00.00)
+
+Fra:11 Mem:275.68M (0.00M, Peak 276.69M) | Time:00:00.05 | Syncing Camera
+Fra:11 Mem:275.68M (0.00M, Peak 276.69M) | Time:00:00.05 | Syncing FLAME_sample
+Fra:11 Mem:276.37M (0.00M, Peak 276.69M) | Time:00:00.05 | Syncing Plane
+Fra:11 Mem:276.37M (0.00M, Peak 276.69M) | Time:00:00.05 | Syncing Area
+Fra:11 Mem:276.37M (0.00M, Peak 276.69M) | Time:00:00.05 | Syncing Point
+Fra:11 Mem:276.37M (0.00M, Peak 276.69M) | Time:00:00.05 | Syncing Sun
+Fra:11 Mem:276.37M (0.00M, Peak 276.69M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:11 Mem:275.69M (0.00M, Peak 276.69M) | Time:00:00.07 | Rendering 8 / 8 samples
+Fra:11 Mem:143.06M (0.00M, Peak 276.69M) | Time:00:00.08 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 11
+ Time: 00:00.09 (Saving: 00:00.00)
+
+Fra:12 Mem:275.68M (0.00M, Peak 276.69M) | Time:00:00.03 | Syncing Camera
+Fra:12 Mem:275.68M (0.00M, Peak 276.69M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:12 Mem:276.37M (0.00M, Peak 276.69M) | Time:00:00.03 | Syncing Plane
+Fra:12 Mem:276.37M (0.00M, Peak 276.69M) | Time:00:00.03 | Syncing Area
+Fra:12 Mem:276.37M (0.00M, Peak 276.69M) | Time:00:00.03 | Syncing Point
+Fra:12 Mem:276.37M (0.00M, Peak 276.69M) | Time:00:00.03 | Syncing Sun
+Fra:12 Mem:276.37M (0.00M, Peak 276.69M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:12 Mem:275.69M (0.00M, Peak 276.69M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:12 Mem:143.06M (0.00M, Peak 276.69M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 12
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:13 Mem:275.68M (0.00M, Peak 276.69M) | Time:00:00.03 | Syncing Camera
+Fra:13 Mem:275.68M (0.00M, Peak 276.69M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:13 Mem:276.37M (0.00M, Peak 276.69M) | Time:00:00.03 | Syncing Plane
+Fra:13 Mem:276.38M (0.00M, Peak 276.69M) | Time:00:00.03 | Syncing Area
+Fra:13 Mem:276.38M (0.00M, Peak 276.69M) | Time:00:00.03 | Syncing Point
+Fra:13 Mem:276.38M (0.00M, Peak 276.69M) | Time:00:00.03 | Syncing Sun
+Fra:13 Mem:276.38M (0.00M, Peak 276.69M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:13 Mem:275.69M (0.00M, Peak 276.69M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:13 Mem:143.06M (0.00M, Peak 276.69M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 13
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:14 Mem:275.68M (0.00M, Peak 276.69M) | Time:00:00.05 | Syncing Camera
+Fra:14 Mem:275.69M (0.00M, Peak 276.69M) | Time:00:00.05 | Syncing FLAME_sample
+Fra:14 Mem:276.37M (0.00M, Peak 276.69M) | Time:00:00.05 | Syncing Plane
+Fra:14 Mem:276.38M (0.00M, Peak 276.69M) | Time:00:00.05 | Syncing Area
+Fra:14 Mem:276.38M (0.00M, Peak 276.69M) | Time:00:00.05 | Syncing Point
+Fra:14 Mem:276.38M (0.00M, Peak 276.69M) | Time:00:00.05 | Syncing Sun
+Fra:14 Mem:276.38M (0.00M, Peak 276.69M) | Time:00:00.05 | Rendering 1 / 8 samples
+Fra:14 Mem:275.69M (0.00M, Peak 276.69M) | Time:00:00.07 | Rendering 8 / 8 samples
+Fra:14 Mem:143.06M (0.00M, Peak 276.69M) | Time:00:00.08 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 14
+ Time: 00:00.09 (Saving: 00:00.00)
+
+Fra:15 Mem:275.69M (0.00M, Peak 276.69M) | Time:00:00.03 | Syncing Camera
+Fra:15 Mem:275.69M (0.00M, Peak 276.69M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:15 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Plane
+Fra:15 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Area
+Fra:15 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Point
+Fra:15 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Sun
+Fra:15 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:15 Mem:275.70M (0.00M, Peak 276.70M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:15 Mem:143.06M (0.00M, Peak 276.70M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 15
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:16 Mem:275.69M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Camera
+Fra:16 Mem:275.69M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:16 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Plane
+Fra:16 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Area
+Fra:16 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Point
+Fra:16 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Sun
+Fra:16 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:16 Mem:275.70M (0.00M, Peak 276.70M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:16 Mem:143.06M (0.00M, Peak 276.70M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 16
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:17 Mem:275.69M (0.00M, Peak 276.70M) | Time:00:00.05 | Syncing Camera
+Fra:17 Mem:275.69M (0.00M, Peak 276.70M) | Time:00:00.05 | Syncing FLAME_sample
+Fra:17 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.05 | Syncing Plane
+Fra:17 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.05 | Syncing Area
+Fra:17 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.05 | Syncing Point
+Fra:17 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.05 | Syncing Sun
+Fra:17 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:17 Mem:275.70M (0.00M, Peak 276.70M) | Time:00:00.07 | Rendering 8 / 8 samples
+Fra:17 Mem:143.07M (0.00M, Peak 276.70M) | Time:00:00.08 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 17
+ Time: 00:00.09 (Saving: 00:00.00)
+
+Fra:18 Mem:275.69M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Camera
+Fra:18 Mem:275.69M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:18 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Plane
+Fra:18 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Area
+Fra:18 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Point
+Fra:18 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Sun
+Fra:18 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:18 Mem:275.70M (0.00M, Peak 276.70M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:18 Mem:143.07M (0.00M, Peak 276.70M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 18
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:19 Mem:275.69M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Camera
+Fra:19 Mem:275.69M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:19 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Plane
+Fra:19 Mem:276.39M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Area
+Fra:19 Mem:276.39M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Point
+Fra:19 Mem:276.39M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Sun
+Fra:19 Mem:276.39M (0.00M, Peak 276.70M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:19 Mem:275.70M (0.00M, Peak 276.70M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:19 Mem:143.07M (0.00M, Peak 276.70M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 19
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:20 Mem:275.69M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Camera
+Fra:20 Mem:275.70M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:20 Mem:276.38M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Plane
+Fra:20 Mem:276.39M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Area
+Fra:20 Mem:276.39M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Point
+Fra:20 Mem:276.39M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Sun
+Fra:20 Mem:276.39M (0.00M, Peak 276.70M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:20 Mem:275.70M (0.00M, Peak 276.70M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:20 Mem:143.07M (0.00M, Peak 276.70M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 20
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:21 Mem:275.70M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Camera
+Fra:21 Mem:275.70M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:21 Mem:276.39M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Plane
+Fra:21 Mem:276.39M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Area
+Fra:21 Mem:276.39M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Point
+Fra:21 Mem:276.39M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Sun
+Fra:21 Mem:276.39M (0.00M, Peak 276.70M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:21 Mem:275.70M (0.00M, Peak 276.70M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:21 Mem:143.07M (0.00M, Peak 276.70M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 21
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:22 Mem:275.70M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing Camera
+Fra:22 Mem:275.70M (0.00M, Peak 276.70M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:22 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Plane
+Fra:22 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Area
+Fra:22 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Point
+Fra:22 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Sun
+Fra:22 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:22 Mem:275.71M (0.00M, Peak 276.71M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:22 Mem:143.07M (0.00M, Peak 276.71M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 22
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:23 Mem:275.70M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Camera
+Fra:23 Mem:275.70M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:23 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Plane
+Fra:23 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Area
+Fra:23 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Point
+Fra:23 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Sun
+Fra:23 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.04 | Rendering 1 / 8 samples
+Fra:23 Mem:275.71M (0.00M, Peak 276.71M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:23 Mem:143.08M (0.00M, Peak 276.71M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 23
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:24 Mem:275.70M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Camera
+Fra:24 Mem:275.70M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:24 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Plane
+Fra:24 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Area
+Fra:24 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Point
+Fra:24 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Sun
+Fra:24 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:24 Mem:275.71M (0.00M, Peak 276.71M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:24 Mem:143.08M (0.00M, Peak 276.71M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 24
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:25 Mem:275.70M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Camera
+Fra:25 Mem:275.70M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:25 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Plane
+Fra:25 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Area
+Fra:25 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Point
+Fra:25 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Sun
+Fra:25 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:25 Mem:275.71M (0.00M, Peak 276.71M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:25 Mem:143.08M (0.00M, Peak 276.71M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 25
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:26 Mem:275.70M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Camera
+Fra:26 Mem:275.70M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:26 Mem:276.39M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Plane
+Fra:26 Mem:276.40M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Area
+Fra:26 Mem:276.40M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Point
+Fra:26 Mem:276.40M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Sun
+Fra:26 Mem:276.40M (0.00M, Peak 276.71M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:26 Mem:275.71M (0.00M, Peak 276.71M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:26 Mem:143.08M (0.00M, Peak 276.71M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 26
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:27 Mem:275.70M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Camera
+Fra:27 Mem:275.71M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:27 Mem:276.40M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Plane
+Fra:27 Mem:276.40M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Area
+Fra:27 Mem:276.40M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Point
+Fra:27 Mem:276.40M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Sun
+Fra:27 Mem:276.40M (0.00M, Peak 276.71M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:27 Mem:275.71M (0.00M, Peak 276.71M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:27 Mem:143.08M (0.00M, Peak 276.71M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 27
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:28 Mem:275.71M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing Camera
+Fra:28 Mem:275.71M (0.00M, Peak 276.71M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:28 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Plane
+Fra:28 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Area
+Fra:28 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Point
+Fra:28 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Sun
+Fra:28 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:28 Mem:275.72M (0.00M, Peak 276.72M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:28 Mem:143.08M (0.00M, Peak 276.72M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 28
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:29 Mem:275.71M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Camera
+Fra:29 Mem:275.71M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:29 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Plane
+Fra:29 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Area
+Fra:29 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Point
+Fra:29 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Sun
+Fra:29 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:29 Mem:275.72M (0.00M, Peak 276.72M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:29 Mem:143.08M (0.00M, Peak 276.72M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 29
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:30 Mem:275.71M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Camera
+Fra:30 Mem:275.71M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:30 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Plane
+Fra:30 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Area
+Fra:30 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Point
+Fra:30 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Sun
+Fra:30 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:30 Mem:275.72M (0.00M, Peak 276.72M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:30 Mem:143.09M (0.00M, Peak 276.72M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 30
+ Time: 00:00.07 (Saving: 00:00.01)
+
+Fra:31 Mem:275.71M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Camera
+Fra:31 Mem:275.71M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:31 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Plane
+Fra:31 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Area
+Fra:31 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Point
+Fra:31 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Sun
+Fra:31 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:31 Mem:275.72M (0.00M, Peak 276.72M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:31 Mem:143.09M (0.00M, Peak 276.72M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 31
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:32 Mem:275.71M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Camera
+Fra:32 Mem:275.71M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:32 Mem:276.40M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Plane
+Fra:32 Mem:276.41M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Area
+Fra:32 Mem:276.41M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Point
+Fra:32 Mem:276.41M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Sun
+Fra:32 Mem:276.41M (0.00M, Peak 276.72M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:32 Mem:275.72M (0.00M, Peak 276.72M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:32 Mem:143.09M (0.00M, Peak 276.72M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 32
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:33 Mem:275.72M (0.00M, Peak 276.72M) | Time:00:00.05 | Syncing Camera
+Fra:33 Mem:275.72M (0.00M, Peak 276.72M) | Time:00:00.05 | Syncing FLAME_sample
+Fra:33 Mem:276.41M (0.00M, Peak 276.72M) | Time:00:00.05 | Syncing Plane
+Fra:33 Mem:276.41M (0.00M, Peak 276.72M) | Time:00:00.05 | Syncing Area
+Fra:33 Mem:276.41M (0.00M, Peak 276.72M) | Time:00:00.05 | Syncing Point
+Fra:33 Mem:276.41M (0.00M, Peak 276.72M) | Time:00:00.05 | Syncing Sun
+Fra:33 Mem:276.41M (0.00M, Peak 276.72M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:33 Mem:275.72M (0.00M, Peak 276.72M) | Time:00:00.07 | Rendering 8 / 8 samples
+Fra:33 Mem:143.09M (0.00M, Peak 276.72M) | Time:00:00.08 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 33
+ Time: 00:00.10 (Saving: 00:00.01)
+
+Fra:34 Mem:275.72M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing Camera
+Fra:34 Mem:275.72M (0.00M, Peak 276.72M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:34 Mem:276.41M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Plane
+Fra:34 Mem:276.41M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Area
+Fra:34 Mem:276.41M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Point
+Fra:34 Mem:276.41M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Sun
+Fra:34 Mem:276.41M (0.00M, Peak 276.73M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:34 Mem:275.73M (0.00M, Peak 276.73M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:34 Mem:143.09M (0.00M, Peak 276.73M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 34
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:35 Mem:275.72M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Camera
+Fra:35 Mem:275.72M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:35 Mem:276.41M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Plane
+Fra:35 Mem:276.41M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Area
+Fra:35 Mem:276.41M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Point
+Fra:35 Mem:276.41M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Sun
+Fra:35 Mem:276.41M (0.00M, Peak 276.73M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:35 Mem:275.73M (0.00M, Peak 276.73M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:35 Mem:143.10M (0.00M, Peak 276.73M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 35
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:36 Mem:275.72M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Camera
+Fra:36 Mem:275.72M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:36 Mem:276.41M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Plane
+Fra:36 Mem:276.41M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Area
+Fra:36 Mem:276.41M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Point
+Fra:36 Mem:276.41M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Sun
+Fra:36 Mem:276.41M (0.00M, Peak 276.73M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:36 Mem:275.73M (0.00M, Peak 276.73M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:36 Mem:143.10M (0.00M, Peak 276.73M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 36
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:37 Mem:275.72M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Camera
+Fra:37 Mem:275.72M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:37 Mem:276.41M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Plane
+Fra:37 Mem:276.42M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Area
+Fra:37 Mem:276.42M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Point
+Fra:37 Mem:276.42M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Sun
+Fra:37 Mem:276.42M (0.00M, Peak 276.73M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:37 Mem:275.73M (0.00M, Peak 276.73M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:37 Mem:143.10M (0.00M, Peak 276.73M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 37
+ Time: 00:00.07 (Saving: 00:00.01)
+
+Fra:38 Mem:275.72M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Camera
+Fra:38 Mem:275.73M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:38 Mem:276.41M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Plane
+Fra:38 Mem:276.42M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Area
+Fra:38 Mem:276.42M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Point
+Fra:38 Mem:276.42M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Sun
+Fra:38 Mem:276.42M (0.00M, Peak 276.73M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:38 Mem:275.73M (0.00M, Peak 276.73M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:38 Mem:143.10M (0.00M, Peak 276.73M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 38
+ Time: 00:00.07 (Saving: 00:00.01)
+
+Fra:39 Mem:275.73M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Camera
+Fra:39 Mem:275.73M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:39 Mem:276.42M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Plane
+Fra:39 Mem:276.42M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Area
+Fra:39 Mem:276.42M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Point
+Fra:39 Mem:276.42M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Sun
+Fra:39 Mem:276.42M (0.00M, Peak 276.73M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:39 Mem:275.73M (0.00M, Peak 276.73M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:39 Mem:143.10M (0.00M, Peak 276.73M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 39
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:40 Mem:275.73M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing Camera
+Fra:40 Mem:275.73M (0.00M, Peak 276.73M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:40 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Plane
+Fra:40 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Area
+Fra:40 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Point
+Fra:40 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Sun
+Fra:40 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:40 Mem:275.74M (0.00M, Peak 276.74M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:40 Mem:143.10M (0.00M, Peak 276.74M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 40
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:41 Mem:275.73M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Camera
+Fra:41 Mem:275.73M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:41 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Plane
+Fra:41 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Area
+Fra:41 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Point
+Fra:41 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Sun
+Fra:41 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:41 Mem:275.74M (0.00M, Peak 276.74M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:41 Mem:143.11M (0.00M, Peak 276.74M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 41
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:42 Mem:275.73M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Camera
+Fra:42 Mem:275.73M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:42 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Plane
+Fra:42 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Area
+Fra:42 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Point
+Fra:42 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Sun
+Fra:42 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:42 Mem:275.74M (0.00M, Peak 276.74M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:42 Mem:143.11M (0.00M, Peak 276.74M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 42
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:43 Mem:275.73M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Camera
+Fra:43 Mem:275.73M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:43 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Plane
+Fra:43 Mem:276.43M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Area
+Fra:43 Mem:276.43M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Point
+Fra:43 Mem:276.43M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Sun
+Fra:43 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:43 Mem:275.74M (0.00M, Peak 276.74M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:43 Mem:143.11M (0.00M, Peak 276.74M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 43
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:44 Mem:275.73M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Camera
+Fra:44 Mem:275.73M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:44 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Plane
+Fra:44 Mem:276.43M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Area
+Fra:44 Mem:276.43M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Point
+Fra:44 Mem:276.43M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Sun
+Fra:44 Mem:276.43M (0.00M, Peak 276.74M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:44 Mem:275.74M (0.00M, Peak 276.74M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:44 Mem:143.11M (0.00M, Peak 276.74M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 44
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:45 Mem:275.73M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Camera
+Fra:45 Mem:275.74M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:45 Mem:276.42M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Plane
+Fra:45 Mem:276.43M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Area
+Fra:45 Mem:276.43M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Point
+Fra:45 Mem:276.43M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Sun
+Fra:45 Mem:276.43M (0.00M, Peak 276.74M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:45 Mem:275.74M (0.00M, Peak 276.74M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:45 Mem:143.11M (0.00M, Peak 276.74M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 45
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:46 Mem:275.74M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Camera
+Fra:46 Mem:275.74M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:46 Mem:276.43M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Plane
+Fra:46 Mem:276.43M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Area
+Fra:46 Mem:276.43M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Point
+Fra:46 Mem:276.43M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Sun
+Fra:46 Mem:276.43M (0.00M, Peak 276.74M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:46 Mem:275.74M (0.00M, Peak 276.74M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:46 Mem:143.11M (0.00M, Peak 276.74M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 46
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:47 Mem:275.74M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing Camera
+Fra:47 Mem:275.74M (0.00M, Peak 276.74M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:47 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Plane
+Fra:47 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Area
+Fra:47 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Point
+Fra:47 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Sun
+Fra:47 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:47 Mem:275.75M (0.00M, Peak 276.75M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:47 Mem:143.11M (0.00M, Peak 276.75M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 47
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:48 Mem:275.74M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Camera
+Fra:48 Mem:275.74M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:48 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Plane
+Fra:48 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Area
+Fra:48 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Point
+Fra:48 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Sun
+Fra:48 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:48 Mem:275.75M (0.00M, Peak 276.75M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:48 Mem:143.12M (0.00M, Peak 276.75M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 48
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:49 Mem:275.74M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Camera
+Fra:49 Mem:275.74M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:49 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Plane
+Fra:49 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Area
+Fra:49 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Point
+Fra:49 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Sun
+Fra:49 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:49 Mem:275.75M (0.00M, Peak 276.75M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:49 Mem:143.12M (0.00M, Peak 276.75M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 49
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:50 Mem:275.74M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Camera
+Fra:50 Mem:275.74M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:50 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Plane
+Fra:50 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Area
+Fra:50 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Point
+Fra:50 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Sun
+Fra:50 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:50 Mem:275.75M (0.00M, Peak 276.75M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:50 Mem:143.12M (0.00M, Peak 276.75M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 50
+ Time: 00:00.07 (Saving: 00:00.01)
+
+Fra:51 Mem:275.74M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Camera
+Fra:51 Mem:275.74M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:51 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Plane
+Fra:51 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Area
+Fra:51 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Point
+Fra:51 Mem:276.44M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Sun
+Fra:51 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:51 Mem:275.75M (0.00M, Peak 276.75M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:51 Mem:143.12M (0.00M, Peak 276.75M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 51
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:52 Mem:275.74M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Camera
+Fra:52 Mem:275.74M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:52 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Plane
+Fra:52 Mem:276.44M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Area
+Fra:52 Mem:276.44M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Point
+Fra:52 Mem:276.44M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Sun
+Fra:52 Mem:276.44M (0.00M, Peak 276.75M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:52 Mem:275.75M (0.00M, Peak 276.75M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:52 Mem:143.12M (0.00M, Peak 276.75M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 52
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:53 Mem:275.74M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Camera
+Fra:53 Mem:275.75M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:53 Mem:276.43M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Plane
+Fra:53 Mem:276.44M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Area
+Fra:53 Mem:276.44M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Point
+Fra:53 Mem:276.44M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Sun
+Fra:53 Mem:276.44M (0.00M, Peak 276.75M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:53 Mem:275.75M (0.00M, Peak 276.75M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:53 Mem:143.12M (0.00M, Peak 276.75M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 53
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:54 Mem:275.75M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Camera
+Fra:54 Mem:275.75M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:54 Mem:276.44M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Plane
+Fra:54 Mem:276.44M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Area
+Fra:54 Mem:276.44M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Point
+Fra:54 Mem:276.44M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Sun
+Fra:54 Mem:276.44M (0.00M, Peak 276.75M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:54 Mem:275.75M (0.00M, Peak 276.75M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:54 Mem:143.12M (0.00M, Peak 276.75M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 54
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:55 Mem:275.75M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing Camera
+Fra:55 Mem:275.75M (0.00M, Peak 276.75M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:55 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Plane
+Fra:55 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Area
+Fra:55 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Point
+Fra:55 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Sun
+Fra:55 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:55 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:55 Mem:143.12M (0.00M, Peak 276.76M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 55
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:56 Mem:275.75M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Camera
+Fra:56 Mem:275.75M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:56 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Plane
+Fra:56 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Area
+Fra:56 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Point
+Fra:56 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Sun
+Fra:56 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:56 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:56 Mem:143.13M (0.00M, Peak 276.76M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 56
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:57 Mem:275.75M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Camera
+Fra:57 Mem:275.75M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:57 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Plane
+Fra:57 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Area
+Fra:57 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Point
+Fra:57 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Sun
+Fra:57 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:57 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:57 Mem:143.13M (0.00M, Peak 276.76M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 57
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:58 Mem:275.75M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Camera
+Fra:58 Mem:275.75M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:58 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Plane
+Fra:58 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Area
+Fra:58 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Point
+Fra:58 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Sun
+Fra:58 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:58 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:58 Mem:143.13M (0.00M, Peak 276.76M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 58
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:59 Mem:275.75M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Camera
+Fra:59 Mem:275.75M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:59 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Plane
+Fra:59 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Area
+Fra:59 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Point
+Fra:59 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Sun
+Fra:59 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:59 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.06 | Rendering 8 / 8 samples
+Fra:59 Mem:143.13M (0.00M, Peak 276.76M) | Time:00:00.07 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 59
+ Time: 00:00.08 (Saving: 00:00.00)
+
+Fra:60 Mem:275.75M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Camera
+Fra:60 Mem:275.75M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:60 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Plane
+Fra:60 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Area
+Fra:60 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Point
+Fra:60 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Sun
+Fra:60 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:60 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:60 Mem:143.13M (0.00M, Peak 276.76M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 60
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:61 Mem:275.75M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Camera
+Fra:61 Mem:275.75M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:61 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Plane
+Fra:61 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Area
+Fra:61 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Point
+Fra:61 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Sun
+Fra:61 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:61 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:61 Mem:143.13M (0.00M, Peak 276.76M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 61
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:62 Mem:275.75M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Camera
+Fra:62 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:62 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.04 | Syncing Plane
+Fra:62 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.04 | Syncing Area
+Fra:62 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.04 | Syncing Point
+Fra:62 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.04 | Syncing Sun
+Fra:62 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.04 | Rendering 1 / 8 samples
+Fra:62 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:62 Mem:143.13M (0.00M, Peak 276.76M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 62
+ Time: 00:00.07 (Saving: 00:00.01)
+
+Fra:63 Mem:275.75M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Camera
+Fra:63 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:63 Mem:276.44M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Plane
+Fra:63 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Area
+Fra:63 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Point
+Fra:63 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Sun
+Fra:63 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:63 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:63 Mem:143.13M (0.00M, Peak 276.76M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 63
+ Time: 00:00.07 (Saving: 00:00.01)
+
+Fra:64 Mem:275.75M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Camera
+Fra:64 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:64 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Plane
+Fra:64 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Area
+Fra:64 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Point
+Fra:64 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Sun
+Fra:64 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:64 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:64 Mem:143.13M (0.00M, Peak 276.76M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 64
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:65 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Camera
+Fra:65 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:65 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Plane
+Fra:65 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Area
+Fra:65 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Point
+Fra:65 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Sun
+Fra:65 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:65 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:65 Mem:143.13M (0.00M, Peak 276.76M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 65
+ Time: 00:00.07 (Saving: 00:00.01)
+
+Fra:66 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Camera
+Fra:66 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:66 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Plane
+Fra:66 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Area
+Fra:66 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Point
+Fra:66 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Sun
+Fra:66 Mem:276.45M (0.00M, Peak 276.76M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:66 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:66 Mem:143.13M (0.00M, Peak 276.76M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 66
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:67 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing Camera
+Fra:67 Mem:275.76M (0.00M, Peak 276.76M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:67 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:67 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:67 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:67 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:67 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:67 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:67 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 67
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:68 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:68 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:68 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:68 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:68 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:68 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:68 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:68 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:68 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 68
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:69 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:69 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:69 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:69 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:69 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:69 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:69 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:69 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:69 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 69
+ Time: 00:00.07 (Saving: 00:00.01)
+
+Fra:70 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:70 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:70 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:70 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:70 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:70 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:70 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:70 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:70 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 70
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:71 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.05 | Syncing Camera
+Fra:71 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.05 | Syncing FLAME_sample
+Fra:71 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.05 | Syncing Plane
+Fra:71 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.05 | Syncing Area
+Fra:71 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.05 | Syncing Point
+Fra:71 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.05 | Syncing Sun
+Fra:71 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 1 / 8 samples
+Fra:71 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.06 | Rendering 8 / 8 samples
+Fra:71 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.07 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 71
+ Time: 00:00.08 (Saving: 00:00.00)
+
+Fra:72 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:72 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:72 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:72 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:72 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:72 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:72 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:72 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:72 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 72
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:73 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:73 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:73 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:73 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:73 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:73 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:73 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:73 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:73 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 73
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:74 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:74 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:74 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:74 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:74 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:74 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:74 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:74 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:74 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 74
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:75 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:75 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:75 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.04 | Syncing Plane
+Fra:75 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.04 | Syncing Area
+Fra:75 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.04 | Syncing Point
+Fra:75 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.04 | Syncing Sun
+Fra:75 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.04 | Rendering 1 / 8 samples
+Fra:75 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:75 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 75
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:76 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:76 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:76 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:76 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:76 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:76 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:76 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:76 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:76 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 76
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:77 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:77 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:77 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:77 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:77 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:77 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:77 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:77 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:77 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 77
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:78 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.04 | Syncing Camera
+Fra:78 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.04 | Syncing FLAME_sample
+Fra:78 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.04 | Syncing Plane
+Fra:78 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.04 | Syncing Area
+Fra:78 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.04 | Syncing Point
+Fra:78 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.04 | Syncing Sun
+Fra:78 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.04 | Rendering 1 / 8 samples
+Fra:78 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.06 | Rendering 8 / 8 samples
+Fra:78 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.07 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 78
+ Time: 00:00.08 (Saving: 00:00.00)
+
+Fra:79 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:79 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:79 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:79 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:79 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:79 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:79 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:79 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:79 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 79
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:80 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:80 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:80 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:80 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:80 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:80 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:80 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:80 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:80 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 80
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:81 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:81 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:81 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:81 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:81 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:81 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:81 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:81 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:81 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 81
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:82 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:82 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:82 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:82 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:82 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:82 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:82 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:82 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:82 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 82
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:83 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:83 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:83 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:83 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:83 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:83 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:83 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:83 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:83 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 83
+ Time: 00:00.07 (Saving: 00:00.01)
+
+Fra:84 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:84 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:84 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:84 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:84 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:84 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:84 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:84 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:84 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 84
+ Time: 00:00.08 (Saving: 00:00.01)
+
+Fra:85 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:85 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:85 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:85 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:85 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:85 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:85 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:85 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.07 | Rendering 8 / 8 samples
+Fra:85 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.12 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 85
+ Time: 00:00.13 (Saving: 00:00.01)
+
+Fra:86 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:86 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:86 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:86 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:86 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:86 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:86 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:86 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.11 | Rendering 8 / 8 samples
+Fra:86 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.12 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 86
+ Time: 00:00.13 (Saving: 00:00.00)
+
+Fra:87 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:87 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:87 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:87 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:87 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:87 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:87 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.04 | Rendering 1 / 8 samples
+Fra:87 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:87 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.07 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 87
+ Time: 00:00.08 (Saving: 00:00.01)
+
+Fra:88 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:88 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:88 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:88 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:88 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:88 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:88 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:88 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:88 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 88
+ Time: 00:00.07 (Saving: 00:00.01)
+
+Fra:89 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:89 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:89 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:89 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:89 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:89 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:89 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:89 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:89 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 89
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:90 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:90 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:90 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:90 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:90 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:90 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:90 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:90 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:90 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 90
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:91 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:91 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:91 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:91 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:91 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:91 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:91 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:91 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:91 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 91
+ Time: 00:00.07 (Saving: 00:00.01)
+
+Fra:92 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:92 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:92 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:92 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:92 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:92 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:92 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:92 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:92 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 92
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:93 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:93 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:93 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:93 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:93 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:93 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:93 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:93 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:93 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 93
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:94 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:94 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:94 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:94 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:94 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:94 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:94 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:94 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:94 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 94
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:95 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:95 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:95 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:95 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:95 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:95 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:95 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:95 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:95 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 95
+ Time: 00:00.07 (Saving: 00:00.01)
+
+Fra:96 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:96 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:96 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:96 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:96 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:96 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:96 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:96 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:96 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 96
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:97 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:97 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:97 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:97 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:97 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:97 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:97 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:97 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:97 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 97
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:98 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:98 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:98 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:98 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:98 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:98 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:98 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:98 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:98 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 98
+ Time: 00:00.07 (Saving: 00:00.01)
+
+Fra:99 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:99 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:99 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:99 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:99 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:99 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:99 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:99 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:99 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 99
+ Time: 00:00.07 (Saving: 00:00.01)
+
+Fra:100 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:100 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:100 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:100 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:100 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:100 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:100 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:100 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:100 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 100
+ Time: 00:00.07 (Saving: 00:00.01)
+
+Fra:101 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:101 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:101 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:101 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:101 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:101 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:101 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:101 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:101 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 101
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:102 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:102 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:102 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:102 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:102 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:102 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:102 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:102 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:102 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 102
+ Time: 00:00.07 (Saving: 00:00.01)
+
+Fra:103 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:103 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:103 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:103 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:103 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:103 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:103 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:103 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:103 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 103
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:104 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:104 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:104 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:104 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:104 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:104 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:104 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:104 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:104 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 104
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:105 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:105 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:105 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:105 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:105 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:105 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:105 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:105 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:105 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 105
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:106 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:106 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:106 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:106 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:106 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:106 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:106 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:106 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:106 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 106
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:107 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:107 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:107 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:107 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:107 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:107 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:107 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:107 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:107 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 107
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:108 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:108 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:108 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:108 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:108 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:108 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:108 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:108 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:108 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 108
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:109 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:109 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:109 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:109 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:109 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:109 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:109 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:109 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:109 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 109
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:110 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:110 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:110 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:110 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:110 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:110 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:110 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:110 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:110 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 110
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:111 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:111 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:111 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:111 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:111 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:111 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:111 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.04 | Rendering 1 / 8 samples
+Fra:111 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:111 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 111
+ Time: 00:00.07 (Saving: 00:00.00)
+
+Fra:112 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:112 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:112 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:112 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:112 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:112 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:112 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:112 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:112 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 112
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:113 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:113 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:113 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:113 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:113 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:113 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:113 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:113 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:113 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 113
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:114 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:114 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:114 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:114 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:114 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:114 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:114 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:114 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.04 | Rendering 8 / 8 samples
+Fra:114 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 114
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:115 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:115 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:115 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:115 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:115 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:115 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:115 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:115 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:115 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.06 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 115
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:116 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:116 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:116 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:116 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:116 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:116 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:116 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:116 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:116 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 116
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:117 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:117 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:117 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:117 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:117 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:117 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:117 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:117 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.04 | Rendering 8 / 8 samples
+Fra:117 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 117
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:118 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:118 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:118 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:118 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:118 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:118 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:118 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:118 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.04 | Rendering 8 / 8 samples
+Fra:118 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 118
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:119 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:119 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:119 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:119 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:119 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:119 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:119 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:119 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.05 | Rendering 8 / 8 samples
+Fra:119 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 119
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Fra:120 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Camera
+Fra:120 Mem:275.76M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing FLAME_sample
+Fra:120 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Plane
+Fra:120 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Area
+Fra:120 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Point
+Fra:120 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Syncing Sun
+Fra:120 Mem:276.45M (0.00M, Peak 276.77M) | Time:00:00.03 | Rendering 1 / 8 samples
+Fra:120 Mem:275.77M (0.00M, Peak 276.77M) | Time:00:00.04 | Rendering 8 / 8 samples
+Fra:120 Mem:143.13M (0.00M, Peak 276.77M) | Time:00:00.05 | Sce: Scene Ve:0 Fa:0 La:0
+Append frame 120
+ Time: 00:00.06 (Saving: 00:00.00)
+
+Read keyframe 1Read keyframe 2Read keyframe 3Read keyframe 4Read keyframe 5Read keyframe 6Read keyframe 7Read keyframe 8Read keyframe 9Read keyframe 10Read keyframe 11Read keyframe 12Read keyframe 13Read keyframe 14Read keyframe 15Read keyframe 16Read keyframe 17Read keyframe 18Read keyframe 19Read keyframe 20Read keyframe 21Read keyframe 22Read keyframe 23Read keyframe 24Read keyframe 25Read keyframe 26Read keyframe 27Read keyframe 28Read keyframe 29Read keyframe 30Read keyframe 31Read keyframe 32Read keyframe 33Read keyframe 34Read keyframe 35Read keyframe 36Read keyframe 37Read keyframe 38Read keyframe 39Read keyframe 40Read keyframe 41Read keyframe 42Read keyframe 43Read keyframe 44Read keyframe 45Read keyframe 46Read keyframe 47Read keyframe 48Read keyframe 49Read keyframe 50Read keyframe 51Read keyframe 52Read keyframe 53Read keyframe 54Read keyframe 55Read keyframe 56Read keyframe 57Read keyframe 58Read keyframe 59Read keyframe 60Read keyframe 61Read keyframe 62Read keyframe 63Read keyframe 64Read keyframe 65Read keyframe 66Read keyframe 67Read keyframe 68Read keyframe 69Read keyframe 70Read keyframe 71Read keyframe 72Read keyframe 73Read keyframe 74Read keyframe 75Read keyframe 76Read keyframe 77Read keyframe 78Read keyframe 79Read keyframe 80Read keyframe 81Read keyframe 82Read keyframe 83Read keyframe 84Read keyframe 85Read keyframe 86Read keyframe 87Read keyframe 88Read keyframe 89Read keyframe 90Read keyframe 91Read keyframe 92Read keyframe 93Read keyframe 94Read keyframe 95Read keyframe 96Read keyframe 97Read keyframe 98Read keyframe 99Read keyframe 100Read keyframe 101Read keyframe 102Read keyframe 103Read keyframe 104Read keyframe 105Read keyframe 106Read keyframe 107Read keyframe 108Read keyframe 109Read keyframe 110Read keyframe 111Read keyframe 112Read keyframe 113Read keyframe 114Read keyframe 115Read keyframe 116Read keyframe 117Read keyframe 118Read keyframe 119Read keyframe 120
+Blender quit
