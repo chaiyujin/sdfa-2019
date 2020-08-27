@@ -95,11 +95,17 @@ def evaluate_model(args):
     # trace
     if args.get("traced_dump_path") is not None:
         exp.saber_model._model.eval()
-        audio_feat, speaker_id = torch.rand(100, 64, 128, 3, device="cuda:0"), torch.zeros(100, dtype=torch.long, device="cuda:0")
+        # trace on gpu
+        audio_feat = torch.rand(1, 64, 128, 3, device="cuda:0")
+        speaker_id = torch.zeros(1, dtype=torch.long, device="cuda:0")
         traced_model = torch.jit.trace(exp.saber_model._model, (audio_feat, speaker_id))
-        traced_model(audio_feat, speaker_id)  # test forward
-        traced_model.save(args.traced_dump_path)
+        traced_model.save(os.path.splitext(args.traced_dump_path)[0] + "-gpu.zip")
         exp.saber_model._traced_model = traced_model
+        # trace on cpu
+        audio_feat = torch.rand(1, 64, 128, 3, device="cpu")
+        speaker_id = torch.zeros(1, dtype=torch.long, device="cpu")
+        traced_model = torch.jit.trace(exp.saber_model._model.cpu(), (audio_feat, speaker_id))
+        traced_model.save(os.path.splitext(args.traced_dump_path)[0] + "-cpu.zip")
 
     exp.saber_model.evaluate(
         sources_dict,
@@ -131,16 +137,21 @@ def jit_trace(args):
             possible_exts  = [".ckpt"],
             must_be_found  = True,
         ))
-    
+
     assert args.get("traced_dump_path") is not None
 
     model = model_class(hparams, trainset=None, validset=None, load_pca=False)
     exp = saber.Experiment(model, hparams, hparams.log_dir, training=False)
-
-    # trace
     exp.saber_model._model.eval()
-    audio_feat, speaker_id = torch.rand(100, 64, 128, 3, device="cuda:0"), torch.zeros(100, dtype=torch.long, device="cuda:0")
+
+    # trace on gpu
+    audio_feat = torch.rand(1, 64, 128, 3, device="cuda:0")
+    speaker_id = torch.zeros(1, dtype=torch.long, device="cuda:0")
     traced_model = torch.jit.trace(exp.saber_model._model, (audio_feat, speaker_id))
-    # test forward
-    traced_model(audio_feat, speaker_id)
-    traced_model.save(args.traced_dump_path)
+    traced_model.save(os.path.splitext(args.traced_dump_path)[0] + "-gpu.zip")
+
+    # trace on cpu
+    audio_feat = torch.rand(1, 64, 128, 3, device="cpu")
+    speaker_id = torch.zeros(1, dtype=torch.long, device="cpu")
+    traced_model = torch.jit.trace(exp.saber_model._model.cpu(), (audio_feat, speaker_id))
+    traced_model.save(os.path.splitext(args.traced_dump_path)[0] + "-cpu.zip")
