@@ -29,19 +29,19 @@ class SpeechDrivenAnimation(torch.nn.Module):
         if speaker_id is not None and hasattr(self, "_speaker_embedding"):
             condition = self._speaker_embedding(speaker_id)
 
-        x = self._audio_encoder(
+        z_audio = self._audio_encoder(
             audio_feat,
             condition=condition,
             align_dict=align_dict,
             latent_dict=latent_dict
         )
         preds = self._output_module(
-            x,
+            z_audio,
             condition=condition,
             align_dict=align_dict,
             latent_dict=latent_dict
         )
-        return preds, condition
+        return preds, z_audio
 
 
 class SaberSpeechDrivenAnimation(saber.SaberModel):
