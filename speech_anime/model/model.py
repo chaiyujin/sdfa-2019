@@ -6,6 +6,7 @@ import saber
 import pickle
 import librosa
 import numpy as np
+from tqdm import tqdm
 from copy import deepcopy
 from .. import modules
 from ..tools import FaceDataType, PredictionType
@@ -202,7 +203,8 @@ class SaberSpeechDrivenAnimation(saber.SaberModel):
                     saber.audio.save(os.path.join(export_dir, "audio.wav"), sound_signal, 44100)
                     max_frame = int(tslist[-1] * fps / 1000.0)
                     os.makedirs(export_dir, exist_ok=True)
-                    for i_frame in range(max_frame + 1):
+                    saber.log.info('dump into {}'.format(export_dir))
+                    for i_frame in tqdm(range(max_frame + 1), desc='dump obj'):
                         ts = i_frame * 1000.0 / fps
                         data_frame = saber.stream.seek(ts, tslist, animes)
                         verts, faces = viewer.frame_to_mesh(data_frame, face_type)

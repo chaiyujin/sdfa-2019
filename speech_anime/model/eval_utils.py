@@ -48,6 +48,7 @@ def _prepare_sources_dict(
 
 
 def _load_source(path, sr, denoise_audio):
+    path = os.path.expanduser(path)
     name, ext = os.path.splitext(os.path.basename(path))
     true_data = None
     signal, sound_signal = None, None
