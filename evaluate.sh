@@ -18,7 +18,7 @@ python3 -m speech_anime evaluate \
     --mesh_tricorres    assets/fw_indices/out.tricorrs        \
     --output_dir        "$FW_RESULTS_DIR"                     \
     --overwrite_video                                         \
-;  #    --export_mesh_frames                                  ;
+    --export_mesh_frames                                  ;
 # ---------------------------------------------------------------------------- #
 # 3. following is the cmd to generate animation with original flame tempalte
 FLAME_RESULTS_DIR="./results_flame/"
