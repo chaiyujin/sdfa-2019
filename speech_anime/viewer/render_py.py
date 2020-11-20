@@ -23,9 +23,11 @@ _scene.add(pyrender.DirectionalLight(color=np.ones(3), intensity=3.5), pose=_cam
 _scene.add(pyrender.PointLight      (color=np.ones(3), intensity=0.5), pose=_cam_pose)
 # render
 _renderer = None
+_scale = 1.0
 
 
 def set_template(template):
+    global _scale
     global _template_verts
     global _template_faces
     global _template_mesh
@@ -34,6 +36,7 @@ def set_template(template):
 
     _template_mesh = pyrender.Mesh.from_trimesh(trimesh.load(template, process=False))
     _template_verts, _template_faces = saber.mesh.read_mesh(template, flatten=True)
+    _scale = 0.15 / np.abs(_template_verts).max()
     _scene.add(_template_mesh)
 
 
@@ -52,7 +55,7 @@ def render_mesh(verts: np.ndarray, faces: np.ndarray = None, image_size: tuple =
         if _renderer is not None:
             _renderer.delete()
         _renderer = pyrender.OffscreenRenderer(viewport_width=image_size[0], viewport_height=image_size[1])
-    _template_mesh.primitives[0].positions = np.reshape(verts, (-1, 3))
+    _template_mesh.primitives[0].positions = np.reshape(verts, (-1, 3)) * _scale
     for mesh in _renderer._renderer._meshes:
         for p in mesh.primitives:
             p.delete()

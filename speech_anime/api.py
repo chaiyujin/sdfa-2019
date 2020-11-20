@@ -119,6 +119,7 @@ def evaluate_model(args):
         draw_align=args.draw_align,
         draw_latent=args.draw_latent,
         overwrite_video=args.overwrite_video,
+        export_mesh_frames=args.export_mesh_frames,
         output_dir=args.output_dir or os.path.join(hparams.log_dir, "evaluate_videos"),
     )
 

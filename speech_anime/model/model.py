@@ -204,11 +204,12 @@ class SaberSpeechDrivenAnimation(saber.SaberModel):
                     max_frame = int(tslist[-1] * fps / 1000.0)
                     os.makedirs(export_dir, exist_ok=True)
                     saber.log.info('dump into {}'.format(export_dir))
-                    for i_frame in tqdm(range(max_frame + 1), desc='dump obj'):
+                    for i_frame in tqdm(range(max_frame + 1), desc='dump obj & dgrad'):
                         ts = i_frame * 1000.0 / fps
                         data_frame = saber.stream.seek(ts, tslist, animes)
                         verts, faces = viewer.frame_to_mesh(data_frame, face_type)
                         saber.mesh.write_obj(os.path.join(export_dir, f"{i_frame:06d}.obj"), verts, faces)
+                        np.save(os.path.join(export_dir, f"{i_frame:06d}_dgrad.npy"), data_frame)
 
                 viewer.render_video(
                     sources    = render_list,

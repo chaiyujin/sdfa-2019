@@ -24,7 +24,6 @@ $ bash scripts/install_kaldi.sh
 $ bash scripts/install_mfa.sh
 ```
 
-
 ## Prepare VOCASET
 Download VOCASET from https://voca.is.tue.mpg.de/
 Unzip directories:

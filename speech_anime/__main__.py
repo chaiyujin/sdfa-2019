@@ -12,6 +12,9 @@ if __name__ == "__main__":
     parser.add_argument("mode",               type=str, help="how to run this module", choices=choices)
     # global settings
     parser.add_argument("--tag",              type=str, help="overwrite 'tag'")
+    parser.add_argument("--template_mesh",    type=str, help="path of template mesh")
+    parser.add_argument("--mesh_constraints", type=str, help="path of template mesh")
+    parser.add_argument("--mesh_tricorres",   type=str, help="path of template mesh")
     parser.add_argument("--matplotlib_use",   type=str, help="matploblib.use()", default="Agg")
     parser.add_argument("--log_dir",          type=str, help="overwrite 'log_dir'")
     parser.add_argument("--load_from",        type=str, help="load pre-trained model")
@@ -19,6 +22,7 @@ if __name__ == "__main__":
     parser.add_argument("--ensembling_ms",    type=int, help="overwrite 'ensembling_ms'")
     parser.add_argument("--save_video",       action="store_true")
     # generate videos
+    parser.add_argument("--export_mesh_frames", action="store_true")
     parser.add_argument("--output_dir",       type=str)
     parser.add_argument("--grid_w",           type=int, default=512)
     parser.add_argument("--grid_h",           type=int, default=512)

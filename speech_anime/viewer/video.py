@@ -126,7 +126,7 @@ def render_video(
         assert video_path is not None, "'video_path' is not given!"
         dirname = os.path.dirname(video_path)
         rawname = os.path.splitext(os.path.basename(video_path))[0]
-        vpath = os.path.join(dirname, "_{}.mp4".format(rawname))
+        vpath = os.path.join(dirname, "_{}.avi".format(rawname))
         apath = os.path.join(dirname, "_{}.wav".format(rawname))
     else:
         raise NotImplementedError("on-fly viewer is not implemented! 'save_video' must be True.")
@@ -203,7 +203,7 @@ def render_video(
             os.makedirs(video_path + "-frames/details", exist_ok=True)
         writer = cv2.VideoWriter()
         writer.open(
-            vpath, cv2.VideoWriter_fourcc("m", "p", "4", "v"), video_fps,
+            vpath, cv2.VideoWriter_fourcc(*'XVID'), video_fps,
             (canvas_size[1], canvas_size[0])
         )
 
@@ -262,6 +262,8 @@ def render_video(
 
         # put texts
         canvas = put_texts(canvas, txt_list, font=tmp_font)
+        # cv2.imshow('img', canvas)
+        # cv2.waitKey(1)
         # write into video
         if writer is not None:
             writer.write(canvas[:, :, [2, 1, 0]])

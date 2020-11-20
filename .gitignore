@@ -1,4 +1,6 @@
 assets
+assets_train
+results*/
 build
 rnnoise
 experiments

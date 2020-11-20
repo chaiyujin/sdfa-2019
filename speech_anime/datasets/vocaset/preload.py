@@ -21,6 +21,7 @@ from speech_anime.tools import data_info
 from .config import speaker_alias_dict
 from . import mask
 from ... import viewer
+import deformation
 
 
 _train_speakers = ["m0", "f0", "m1", "m2", "f1", "m3", "f2", "f3"]
@@ -767,7 +768,7 @@ def generate_dgrad(offsets_root, dgrad_root):
     def _get_deform_grad(offsets, save_path, spk_template):
         offsets = np.reshape(offsets, (-1, 3))
         verts = spk_template + offsets
-        dg = saber.mesh.deformation.get_deform_grad(
+        dg = deformation.get_deform_grad(
             verts_a=spk_template,
             verts_b=verts,
             faces=spk_faces,

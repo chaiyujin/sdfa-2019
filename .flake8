@@ -1,0 +1,8 @@
+[flake8]
+ignore =
+    E127,E201,E202,E203,E211,
+    E221,E222,E226,E231,E241,
+    E251,E271,E272,E701,F401,
+    F403,E501,W503,W504,W605
+max-line-length = 120
+exclude = assets/*,experiments/*,.snaps/*

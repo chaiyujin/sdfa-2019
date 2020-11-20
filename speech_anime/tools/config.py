@@ -70,11 +70,17 @@ def configure(args) -> saber.ConfigDict:
     torch.manual_seed(seed)
 
     # set default template
-    default_template_mesh = os.path.join(
-        os.path.dirname(os.path.dirname(__file__)), 
-        "datasets/vocaset/template/FLAME_sample.obj"
+    template_mesh = args.template_mesh
+    if template_mesh is None:
+        template_mesh = os.path.join(
+            os.path.dirname(os.path.dirname(__file__)),
+            "datasets/vocaset/template/FLAME_sample.obj"
+        )
+    viewer.set_template_mesh(
+        template_mesh,
+        args.mesh_constraints,
+        args.mesh_tricorres,
     )
-    viewer.set_template_mesh(default_template_mesh)
 
     return hparams
 
