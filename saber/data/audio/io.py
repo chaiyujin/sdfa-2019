@@ -1,3 +1,4 @@
+import os
 import torch
 import librosa
 import numpy as np
@@ -17,4 +18,5 @@ def load(path, sr, as_tensor=None):
 def save(path, signal, sr):
     if torch.is_tensor(signal):
         signal = signal.detach().cpu().numpy()
+    os.makedirs(os.path.dirname(path), exist_ok=True)
     sf.write(path, signal, samplerate=sr)

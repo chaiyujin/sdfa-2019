@@ -16,7 +16,8 @@ $ python3 -m pip install -r requirements.txt
 # install cmake and sndfile lib
 $ sudo apt install libsndfile1 cmake
 ```
-If you want to prepare dataset, [montreal-forced-aligner](https://montreal-forced-aligner.readthedocs.io/) must be installed. <small>*(Some errors may occur during installation, please pay attention.)*</small>
+
+(not necessary) If you want to prepare dataset, [montreal-forced-aligner](https://montreal-forced-aligner.readthedocs.io/) must be installed. <small>*(Some errors may occur during installation, please pay attention.)*</small>
 ```bash
 $ bash scripts/install_mkl.sh
 $ bash scripts/install_kaldi.sh

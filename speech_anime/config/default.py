@@ -62,7 +62,7 @@ hparams = dict(
         reference_metric_larger=False,
         evaluate=dict(
             test=[
-                ("/home/yuki/Videos/obama/test-000.mp4", "speaker=m1"),
+                ("/home/chaiyujin/Videos/eval_data/clips/speech@clip0.mp4", "speaker=m1"),
             ]
         )
     ),
