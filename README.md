@@ -1,4 +1,4 @@
-# sdfa-2019
+# Speech-Driven Facial Animation with Spectral Gathering and Temporal Attention
 
 [Project Website](https://chaiyujin.github.io/sdfa)
 
@@ -6,7 +6,6 @@
 - [ ] upload pca-pretrained
 - [ ] Dump mesh of each frame
 - [ ] Render with blender
-
 
 ## Install dependencies
 Necessary libraries:
@@ -45,3 +44,17 @@ python3 -m saberspeech.datasets.voca.preload\
 - [ ] dgrad
 - [ ] offsets
 - [ ] PCA of dgrad, offsets
+
+## Citation
+```
+@article{chai2022speech,
+  title={Speech-driven facial animation with spectral gathering and temporal attention},
+  author={Chai, Yujin and Weng, Yanlin and Wang, Lvdi and Zhou, Kun},
+  journal={Frontiers of Computer Science},
+  volume={16},
+  number={3},
+  pages={1--10},
+  year={2022},
+  publisher={Springer}
+}
+```
