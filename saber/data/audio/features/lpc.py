@@ -1,11 +1,12 @@
 import math
 import torch
-import pysptk
 import numpy as np
 from . import misc
 
 
 def lpc_frame(frame, order, win_fn='hamm'):
+    import pysptk
+
     # convert into np.ndarry
     device = frame.device if torch.is_tensor(frame) else None
     if device is not None:

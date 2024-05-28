@@ -75,13 +75,13 @@ def _load_source(path, sr, denoise_audio):
         if denoise_audio:
             saber.log.info("denoise audio")
             sound_signal = saber.audio.denoise(sound_signal, 44100)
-        signal = librosa.resample(sound_signal, 44100, sr)
+        signal = librosa.resample(sound_signal, orig_sr=44100, target_sr=sr)
     elif ext in [".mp4", ".m4v", ".avi"]:
         sound_signal = saber.audio.load(path, 44100)
         if denoise_audio:
             saber.log.info("denoise audio")
             sound_signal = saber.audio.denoise(sound_signal, 44100)
-        signal = librosa.resample(sound_signal, 44100, sr)
+        signal = librosa.resample(sound_signal, orig_sr=44100, target_sr=sr)
         true_data = {
             "title": "true: {}".format(name),
             "video": path

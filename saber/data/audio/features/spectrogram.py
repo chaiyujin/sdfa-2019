@@ -91,7 +91,8 @@ class TorchImpl:
             center     = padding,
             pad_mode   = 'constant',
             normalized = False,
-            onesided   = True
+            onesided   = True,
+            return_complex = False,
         )
         linear = fft.pow(2).sum(-1)
         mel = torch.matmul(mel_filters, linear)

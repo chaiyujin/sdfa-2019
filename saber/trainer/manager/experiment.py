@@ -35,6 +35,8 @@ class Experiment(CheckpointIO, DeviceMover, LossInformation, SummaryHelper):
         image_subdir     = "train_log/image",
         audio_subdir     = "train_log/audio",
         ckpts_subdir     = "checkpoints",
+        # Checkpoint preprocess callback
+        ckpt_preprocess  = None,
     ):
         # check args
         self._check_args(hparams, model, train_loaders, valid_loaders)
@@ -91,7 +93,7 @@ class Experiment(CheckpointIO, DeviceMover, LossInformation, SummaryHelper):
 
         # load ckpt
         if self.hparams.get("load_from") is not None:
-            self.load_checkpoint(self.hparams.load_from)
+            self.load_checkpoint(self.hparams.load_from, preprocess=ckpt_preprocess)
 
         # move device
         self.move_to(self.hparams.device)

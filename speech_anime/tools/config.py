@@ -55,6 +55,8 @@ def configure(args) -> saber.ConfigDict:
     _overwrite_hparams(hparams, args, "log_dir")
     _overwrite_hparams(hparams, args, "load_from")
     _overwrite_hparams(hparams, args, "ensembling_ms")
+    _overwrite_hparams(hparams, args, "eval_input")
+    _overwrite_hparams(hparams, args, "eval_spk_cond")
 
     # matplotlib use
     matplotlib.use(hparams.get("matplotlib_use", "Agg"))

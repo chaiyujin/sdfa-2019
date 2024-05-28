@@ -22,6 +22,8 @@ if __name__ == "__main__":
     parser.add_argument("--ensembling_ms",    type=int, help="overwrite 'ensembling_ms'")
     parser.add_argument("--save_video",       action="store_true")
     # generate videos
+    parser.add_argument("--eval_input",       type=str)
+    parser.add_argument("--eval_spk_cond",    type=str)
     parser.add_argument("--export_mesh_frames", action="store_true")
     parser.add_argument("--output_dir",       type=str)
     parser.add_argument("--grid_w",           type=int, default=512)

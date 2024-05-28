@@ -7,11 +7,13 @@ from shutil import copyfile
 
 class CheckpointIO(object):
 
-    def load_checkpoint(self, load_from, load_optim=True):
+    def load_checkpoint(self, load_from, load_optim=True, preprocess=None):
         assert os.path.exists(load_from), f"Failed to find checkpoint: {load_from}"
 
         # load onto cpu first
         ckpt = torch.load(load_from, map_location='cpu')
+        if preprocess is not None:
+            ckpt = preprocess(ckpt)
         start_epoch = ckpt["epoch"]
         global_step = ckpt.get("global_step")
         if global_step is None:
@@ -19,13 +21,14 @@ class CheckpointIO(object):
         log.info(f"load from {start_epoch} epoch ({global_step} step, from '{load_from}').")
 
         # load model
+        state_dict = ckpt["state"]
         try:
-            self.model.load_state_dict(ckpt["state"])
+            self.model.load_state_dict(state_dict)
         except RuntimeError as err:
             # partially load
             if self.training:
                 log.warn("Failed to load model, try to load partially")
-                self.model.load_state_dict(ckpt["state"], strict=False)
+                self.model.load_state_dict(state_dict, strict=False)
             else:
                 log.fatal("failed to load model, {}", err)
 

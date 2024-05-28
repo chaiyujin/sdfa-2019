@@ -60,11 +60,9 @@ hparams = dict(
         valid_gap_epochs=0,
         reference_metric="ploss",
         reference_metric_larger=False,
-        evaluate=dict(
-            test=[
-                ("./assets/eval_data/speech@clip0.mp4", "speaker=m1"),
-            ]
-        )
+        evaluate=dict(test=[])
     ),
     device="cuda:0",
+    eval_input=None,
+    eval_spk_cond=None,
 )

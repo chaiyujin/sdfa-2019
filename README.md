@@ -2,11 +2,6 @@
 
 [Project Website](https://chaiyujin.github.io/sdfa)
 
-## TODO
-- [ ] upload pca-pretrained
-- [ ] Dump mesh of each frame
-- [ ] Render with blender
-
 ## Install dependencies
 Necessary libraries:
 ```bash
@@ -22,6 +17,11 @@ $ bash scripts/install_mkl.sh
 $ bash scripts/install_kaldi.sh
 $ bash scripts/install_mfa.sh
 ```
+
+## Evaluate
+Download pretrained model from [Google Drive](https://drive.google.com/file/d/1x5srFdb48BFmkE04AAdOGguj9ghG2PAw/view?usp=sharing), unzip it, and put in `./pretrained_models/dgrad`.
+
+Modify and run evaluate script `bash evaluate.sh`.
 
 ## Prepare VOCASET
 Download VOCASET from https://voca.is.tue.mpg.de/
